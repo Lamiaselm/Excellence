@@ -1,0 +1,4 @@
+grey : #494848
+blue : #3AD8ED
+blue-grey : #C5DCDD
+yellow : #FFE448
