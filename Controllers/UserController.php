@@ -44,5 +44,14 @@ class UserController{
         
         return $auth;
     }
+    public function register($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$type,$adresse,$tel1,$tel2,$tel3)
+    {  if($mdp==$mdp_confirmer)
+        {   $mdp_hash=hash('md5',$mdp);
+            user::register($nom,$prenom,$user_name,$email,$mdp_hash,$adresse,$tel1,$tel2,$tel3,$type); 
+            echo "user added";
+        }else {
+            echo "user not added";
+        }
+    }
     
 }

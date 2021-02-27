@@ -57,7 +57,7 @@ if(!isset( $_SESSION['auth'])) {
     </div>
     <div class="row">
               <div class="col-md-10 container-categ">
-              <a href="">
+              <a href="RegisterPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion des utilisateurs</h2>
@@ -75,7 +75,7 @@ if(!isset( $_SESSION['auth'])) {
                         <h2>Gestion de la page contact</h2>
                    </div>
                    </a>
-                   <a href="">
+                   <a href="DiaporamaImagePage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Catégorie paramètres</h2>
