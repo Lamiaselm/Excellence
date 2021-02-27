@@ -1,5 +1,6 @@
 <?php
-require_once('../Models/DiapoImage.php');
+
+require_once('./Models/DiapoImage.php');
 class DiapoImageController
 {
     private $diapo;
@@ -19,6 +20,10 @@ class DiapoImageController
             $msg = "Failed to upload image"; 
       } 
         DiapoImage::addImage($folder);
+    }
+    public function getImage()
+    { 
+        return $this->diapo->getImage();
     }
 
 }

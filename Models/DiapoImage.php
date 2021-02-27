@@ -9,6 +9,11 @@ public static function addImage($image)
     $query="INSERT INTO imagediaporama (image) VALUES ('$image')";
     $err = Db::execute_query($query);
 }
+public static function getImage()
+{       $db =Db::connect();
+        $query = "SELECT * FROM imagediaporama";
+        return Db::execute_query($query);
+}
 
 }
 
