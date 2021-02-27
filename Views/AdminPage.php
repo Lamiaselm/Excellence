@@ -28,7 +28,7 @@ if(!isset( $_SESSION['auth'])) {
     <div class="container"style="margin-top: 90px;">
          <div class="row">
               <div class="col-md-10 container-categ">
-                   <a href="">
+                   <a href="ArticlePage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion des articles</h2>

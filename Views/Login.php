@@ -1,11 +1,10 @@
 <?php
 session_start();
-if(isset($_SESSION["id"])) {
-    echo "admin";
+if(isset( $_SESSION['auth'])) {
    
     header("Location:../Views/AdminPage.php");
     }
-    else{echo "adminno";
+    else{
        
 ?>
 <!DOCTYPE html>
