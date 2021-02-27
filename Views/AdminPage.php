@@ -35,7 +35,7 @@ if(!isset( $_SESSION['auth'])) {
                         
                    </div>
                    </a>
-                   <a href="">
+                   <a href="PresentationPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion de la présentation de l’école. </h2>
