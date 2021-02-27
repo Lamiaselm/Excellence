@@ -63,7 +63,7 @@ if(!isset( $_SESSION['auth'])) {
                         <h2>Gestion des utilisateurs</h2>
                    </div>
                    </a>
-                   <a href="">
+                   <a href="RepasPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion de la restauration</h2>
