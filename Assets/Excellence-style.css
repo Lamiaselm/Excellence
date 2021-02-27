@@ -9,6 +9,7 @@
     margin:107px auto 0;
     display: flex;
     justify-content: center;
+    box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;

@@ -12,8 +12,9 @@ class user{
 
     public function login($email,$mdp){
         $db =Db::connect();
-       
+       echo $mdp;
         $mdp_hash=hash('md5',$mdp);
+        echo $mdp_hash;
         $requete = "SELECT * FROM users WHERE email = '$email' AND mdp = '$mdp_hash'";
         $users= Db::execute_query($requete);
         foreach ($users as $user) {

@@ -27,15 +27,15 @@ class UserController{
         if($auth){
             echo "yes";
             $_SESSION['email']   = $email;
-            
             $_SESSION['password']   = $mdp;
             $_SESSION['userId']   = $users[0]["ID_user"];
             $_SESSION['type']   = $users[0]["type"];
+            $_SESSION['auth'] = true;
             if (  $_SESSION['type'] ==1)
             {
                 header('Location: ../Views/AdminPage.php');
             }
-            $_SESSION['auth'] = true;
+            
         }else {echo "no";
             $_SESSION['auth'] = false;
            

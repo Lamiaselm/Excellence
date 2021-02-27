@@ -5,7 +5,7 @@ if(isset($_SESSION["id"])) {
    
     header("Location:../Views/AdminPage.php");
     }
-    else{echo "admin";
+    else{echo "adminno";
        
 ?>
 <!DOCTYPE html>
@@ -36,14 +36,15 @@ if(isset($_SESSION["id"])) {
         <input type="password" placeholder="Votre Mot de passe" name="mdp">
         </div>
         <div class="form-item">
-        <input type="submit" placeholder="Votre email" name="login" value="submit">
+        <input type="submit" name="login" value="submit">
         </div>
     </form>
    <?php 
     require_once ('../Controllers/UserController.php');
     $auth = new UserController();
     if(isset($_POST["login"])){
-       
+       echo "isset";
+       echo $_POST['email'];
         $auth->login($_POST['email'],$_POST['mdp']);
     }
    
