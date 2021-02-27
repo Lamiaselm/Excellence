@@ -25,7 +25,7 @@ class ArticleController
         }else{ 
             $msg = "Failed to upload image"; 
       } 
-        Article::addArticle($titre,$filename,$descrip,$concerne);
+        Article::addArticle($titre,$folder,$descrip,$concerne);
     }
 
 }
