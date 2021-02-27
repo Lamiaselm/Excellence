@@ -26,7 +26,7 @@ session_start();
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Choisissez un jour </label>
-    <input type="date" class="form-control" name="jour" >
+    <input type="datetime-local" class="form-control" name="jour" >
   </div>
  
   <div class="form-group">
@@ -41,7 +41,7 @@ session_start();
     $repasCTRL = new RepasController();
     if(isset($_POST["ajouter"])){
       
-     echo $_POST['jour'];
+        
         $repasCTRL->addRepas($_POST['jour'],$_POST['menu']);
     }
    
