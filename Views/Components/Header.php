@@ -1,4 +1,4 @@
-<div class="row header sticky-top align-items-center justify-content-between "style="background-color:#3AD8ED;color:white;">
+<div class="row header sticky-top align-items-center justify-content-between "style="background-color:#d7dedf;color:white;">
     <div class="col-1 header-item">
     
         
