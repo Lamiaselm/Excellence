@@ -9,10 +9,9 @@ class EleveProfile {
     public function __construct(){
         $this->eleve= new EleveController();
     }
-    public function getInfoEleve()
+    public function getInfo()
     {
-    }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@ class EleveProfile {
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css'>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
     <title>Profile page</title>
 </head>
 <style>
@@ -213,7 +212,12 @@ h6 {
     </div>
 </div>
 </body>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </html>
-                   
+  <?php
+      }
+    }
+  ?>
                    
                    

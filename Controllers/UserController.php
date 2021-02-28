@@ -17,7 +17,7 @@ class UserController{
 
         foreach ($users as $user) {
             
-                if(count($users)>0){
+                if(count($users)==1){
                 $auth = true;
             }
         }
@@ -27,12 +27,15 @@ class UserController{
             echo "yes";
             $_SESSION['email']   = $email;
             $_SESSION['password']   = $mdp;
-            $_SESSION['userId']   = $users[0]["ID_user"];
+            $_SESSION['ID_user']   = $users[0]["ID_user"];
             $_SESSION['type']   = $users[0]["type"];
             $_SESSION['auth'] = true;
             if (  $_SESSION['type'] ==1)
             {
                 header('Location: ../Views/AdminPage.php');
+            }
+            else {
+                header('Location: ../Views/ProfilePage.php');
             }
             
         }else {echo "no";
