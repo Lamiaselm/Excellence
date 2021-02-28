@@ -15,6 +15,20 @@ public static function getArticle()
         $query = "SELECT * FROM articles";
         return Db::execute_query($query);
 }
+public static function deleteArticle($id)
+{       $db =Db::connect();
+        $query="DELETE FROM articles WHERE Id_article='$id";
+        $err = Db::execute_query($query);
+}
+public static function updateArticle($id)
+{       $db =Db::connect();
+        $query =  $query="UPDATE articles SET  titre ='$titre',
+                                               image='$image',
+                                               description='$descrip',
+                                               conserne='$concerne'
+         WHERE ID_article='$id'";
+        $err = Db::execute_query($query);
+}
 
 }
 
