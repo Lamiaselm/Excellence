@@ -21,6 +21,10 @@ class PresentationController
       } 
         Presentation::addparagraphe($paragraphe,$file_path);
     }
+    public function getPresentation()
+    {
+        return $this->presentation->getPresentation();
+    }
 
 }
 

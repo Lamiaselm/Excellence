@@ -17,7 +17,7 @@ Class menu
 
     <li><a href="#">Présentation de l'école</a>
         <ul class="list-item">
-            <li>Excellence</li>
+            <li><a href="././Presentation.php">Excellence</a></li>
             <li>Primaire</li>
             <li>Moyen</li>
             <li>Secondaire</li>
