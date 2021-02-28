@@ -53,6 +53,20 @@
    color: white;
 
 }
+input[type='submit'] {
+    border: 2px solid #3AD8ED;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 100%;
+    color: #494848;
+    background-color: white;
+
+}
+input[type='submit']:hover {
+   background-color: #3AD8ED;
+   color: white;
+
+}
 .container-login >.title {
     color: #3AD8ED;
     font-size: 30px;
