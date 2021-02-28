@@ -12,7 +12,7 @@ class PresentationController
     
         $filename = $_FILES["image"]["name"]; 
         $tempname = $_FILES["image"]["tmp_name"];     
-        $folder = "../Presentation/".$filename; 
+        $folder = "././Presentation/".$filename; 
         if (move_uploaded_file($tempname, $folder))  { 
             $msg = "Image uploaded successfully"; 
         }else{ 

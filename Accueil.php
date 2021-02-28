@@ -4,6 +4,7 @@ include ('Header.html');
 require_once ('Views/Components/menu.php');
 require_once ('Views/Components/footer.php');
 require_once ('Views/Components/Diaporama.php');
+require_once ('Views/Components/ArticleListe.php');
 
 ?>
 
@@ -27,6 +28,8 @@ require_once ('Views/Components/Diaporama.php');
     $diapo->getDiapo();
     $menu=new menu();
     $menu->getMenu();
+    $article= new ArticleListe();
+    $article->getArticleListe();
     $footer=new footer();
     $footer->getFooter();
  

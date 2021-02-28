@@ -13,7 +13,7 @@ class DiapoImageController
     
         $filename = $_FILES["image"]["name"]; 
         $tempname = $_FILES["image"]["tmp_name"];     
-        $folder = "../Diaporama/".$filename; 
+        $folder = "././Diaporama/".$filename; 
         if (move_uploaded_file($tempname, $folder))  { 
             $msg = "Image uploaded successfully"; 
         }else{ 
