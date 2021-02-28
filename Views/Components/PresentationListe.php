@@ -28,7 +28,8 @@ class PresentationListe {
             {
                 echo "
                 <div class='col-md-4'style='margin:20px auto 0;'>
-                              <p>".$row['paragraphe']."</p>
+             
+                              <input type='text' value".$row['paragraphe'].">
                               <form method='POST' enctype='multipart/form-data'> <input type='file' name='image'> <input type='submit' value='Ajouter une image' name='submit_image'></form>
                               <form method='POST' style='display: inline-block;'> <input type='submit' value='Supprimer' name='submit_delete' style='width:100px;margin-right:80px;'></form>
                               <form method='POST' style='display: inline-block; '>  <input type='submit' value='Modifier' name='submit_modifier'style='width:100px;'></form>
@@ -68,7 +69,9 @@ class PresentationListe {
                   ";
     }
 }
+/*   <textarea class='form-control' name='paragraphe' rows='3'>".$row['paragraphe']."</textarea>*/
 ?>
+
 
                    
                    
