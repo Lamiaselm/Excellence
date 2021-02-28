@@ -15,7 +15,7 @@ class ArticleListe {
     {
         echo "
              <div class='row' style='margin-top:40px;'>
-             <div class='col-md-11'style='margin:0 auto;'>";
+             <div class='col-md-10'style='margin:0 auto;text-align:center;'>";
         $result=$this->article->getArticle();
         foreach($result as $row)
         {

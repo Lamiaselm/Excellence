@@ -1,5 +1,5 @@
 <?php
-require_once('./Models/Article.php');
+require_once('../Models/Article.php');
 class ArticleController
 {
     private $article;
@@ -19,7 +19,7 @@ class ArticleController
         }*/
         $filename = $_FILES["image"]["name"]; 
         $tempname = $_FILES["image"]["tmp_name"];     
-        $folder = "././Articles/".$filename; 
+        $folder = "../Articles/".$filename; 
         if (move_uploaded_file($tempname, $folder))  { 
             $msg = "Image uploaded successfully"; 
         }else{ 
