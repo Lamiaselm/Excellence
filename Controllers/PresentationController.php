@@ -38,6 +38,14 @@ class PresentationController
       }
         Presentation::addImage($id,$file_path);
     }
+    public function deleteParagraphe($id)
+    {
+        Presentation::deletePresentation($id);
+    }
+    public function modifierParagraphe($id,$paragraphe)
+    {
+        Presentation::updatePresentation($id,$paragraphe);
+    }
 
 }
 

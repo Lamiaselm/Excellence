@@ -27,28 +27,43 @@ class PresentationListe {
             if($row['image']==null)
             {
                 echo "
-                <div class='col-md-4'style='margin:0 auto;'>
+                <div class='col-md-4'style='margin:20px auto 0;'>
                               <p>".$row['paragraphe']."</p>
                               <form method='POST' enctype='multipart/form-data'> <input type='file' name='image'> <input type='submit' value='Ajouter une image' name='submit_image'></form>
-                             
+                              <form method='POST' style='display: inline-block;'> <input type='submit' value='Supprimer' name='submit_delete' style='width:100px;margin-right:80px;'></form>
+                              <form method='POST' style='display: inline-block; '>  <input type='submit' value='Modifier' name='submit_modifier'style='width:100px;'></form>
 
                  </div>
                      ";
-                     if(isset($_POST["submit_image"]))
-                     {echo'hey';
-                        $this->presentation->addImage($row['ID_parag']);
-                     }
                     
 
             }else {
           echo "
-          <div class='col-md-4'style='margin:0 auto;'>
+                       <div class='col-md-4'style='margin:0 auto;'>
                         <p>".$row['paragraphe']."</p>
                         <img src=".$row['image']." alt='icon' style='width: 100%;margin-bottom: 15px;'>
-           </div>
-               ";
+                        <form method='POST' enctype='multipart/form-data' style='    display: inline-block;'>  <input type='submit' value='Supprimer' name='submit_delete' style='width:100px;margin-right:80px;'></form>
+                        <form method='POST' enctype='multipart/form-data'style='    display: inline-block; '>  <input type='submit' value='Modifier' name='submit_modifier' style='width:100px;'></form>
+                        </div>";
+
+        
+               
         }}
-        echo "    </div>
+        if(isset($_POST["submit_image"]))
+                     {
+                        $this->presentation->addImage($row['ID_parag']);
+                     }
+        if(isset($_POST["submit_delete"]))
+        {  
+           $this->presentation->deleteParagraphe($row['ID_parag']);
+        }
+        if(isset($_POST["submit_modifier"]))
+        {
+           $this->presentation->modifierParagraphe($row['ID_parag']);
+        }
+        echo "  
+        
+        </div>
                  
                   ";
     }

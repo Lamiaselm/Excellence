@@ -17,7 +17,7 @@ public static function getArticle()
 }
 public static function deleteArticle($id)
 {       $db =Db::connect();
-        $query="DELETE FROM articles WHERE Id_article='$id";
+        $query="DELETE FROM articles WHERE ID_article='$id";
         $err = Db::execute_query($query);
 }
 public static function updateArticle($id)
