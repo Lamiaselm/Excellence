@@ -39,7 +39,9 @@ if(isset( $_SESSION['auth'])) {
         </div>
     </form>
    <?php 
-    require_once ('../Controllers/UserController.php');
+    require_once __DIR__."/../Controllers/UserController.php";
+
+    
     $auth = new UserController();
     if(isset($_POST["login"])){
        echo "isset";

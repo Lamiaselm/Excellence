@@ -1,10 +1,11 @@
 <?php 
 
 include ('Header.html');
-require_once ('Views/Components/menu.php');
-require_once ('Views/Components/footer.php');
-require_once ('Views/Components/Diaporama.php');
-require_once ('Views/Components/ArticleListe.php');
+require_once __DIR__."/Views/Components/menu.php";
+require_once __DIR__."/Views/Components/footer.php";
+require_once __DIR__."/Views/Components/Diaporama.php";
+require_once __DIR__."/Views/Components/ArticleListe.php";
+
 
 ?>
 

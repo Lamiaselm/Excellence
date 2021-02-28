@@ -37,7 +37,8 @@ session_start();
 
 </form>
 <?php 
-    require_once ('../Controllers/RepasController.php');
+    require_once __DIR__."/../Controllers/RepasController.php";
+   
     $repasCTRL = new RepasController();
     if(isset($_POST["ajouter"])){
       

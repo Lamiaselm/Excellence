@@ -33,7 +33,8 @@ session_start();
 
 </form>
 <?php 
-    require_once ('../Controllers/DiapoImageController.php');
+    require_once __DIR__."/../Controllers/DiapoImageController.php";
+    
     $diapoCTRL = new DiapoImageController();
     if(isset($_POST["ajouter"])){
       

@@ -1,5 +1,5 @@
 <?php
-require_once('../Models/Article.php');
+require_once __DIR__."/../Models/Article.php";
 class ArticleController
 {
     private $article;
@@ -20,12 +20,14 @@ class ArticleController
         $filename = $_FILES["image"]["name"]; 
         $tempname = $_FILES["image"]["tmp_name"];     
         $folder = "../Articles/".$filename; 
+        $file_path="././Articles/".$filename; 
         if (move_uploaded_file($tempname, $folder))  { 
             $msg = "Image uploaded successfully"; 
         }else{ 
             $msg = "Failed to upload image"; 
       } 
-        Article::addArticle($titre,$folder,$descrip,$concerne);
+     
+        Article::addArticle($titre,$file_path,$descrip,$concerne);
     }
     public function getArticle()
     {

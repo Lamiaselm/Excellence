@@ -39,7 +39,8 @@ session_start();
 
 </form>
 <?php 
-    require_once ('../Controllers/PresentationController.php');
+    require_once __DIR__."/../Controllers/PresentationController.php";
+   
     $presCTRL = new PresentationController();
     if(isset($_POST["ajouter"])){
       

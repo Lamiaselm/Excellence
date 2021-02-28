@@ -1,6 +1,5 @@
 <?php
-
-require_once('./Models/DiapoImage.php');
+require_once __DIR__."/../Models/DiapoImage.php";
 class DiapoImageController
 {
     private $diapo;
@@ -13,13 +12,14 @@ class DiapoImageController
     
         $filename = $_FILES["image"]["name"]; 
         $tempname = $_FILES["image"]["tmp_name"];     
-        $folder = "././Diaporama/".$filename; 
+        $folder = "../Diaporama/".$filename; 
+        $file_path="././Diaporama/".$filename; 
         if (move_uploaded_file($tempname, $folder))  { 
             $msg = "Image uploaded successfully"; 
         }else{ 
             $msg = "Failed to upload image"; 
       } 
-        DiapoImage::addImage($folder);
+        DiapoImage::addImage($file_path);
     }
     public function getImage()
     { 

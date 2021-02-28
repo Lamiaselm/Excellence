@@ -79,7 +79,7 @@ session_start();
 
 </form>
 <?php 
-    require_once ('../Controllers/UserController.php');
+    require_once __DIR__."/../Controllers/UserController.php";
     $userCTRL = new UserController();
     if(isset($_POST["ajouter"])){
       

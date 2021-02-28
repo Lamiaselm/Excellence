@@ -1,5 +1,5 @@
 <?php
-require_once('../Models/Repas.php');
+require_once __DIR__."/../Models/Repas.php";
 class RepasController
 {
     private $repas;

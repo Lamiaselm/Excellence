@@ -1,7 +1,6 @@
 
 <?php 
-
-require_once ('././Controllers/DiapoImageController.php');
+require_once __DIR__."../../../Controllers/DiapoImageController.php";
 class Diaporama {
 
     private $diapo;
@@ -25,7 +24,7 @@ class Diaporama {
 
    echo "
 
-    <div class='slider-img' style='padding: 2% 5%;'>
+    <div class='slider-img''>
         <img class='slide-img' src=".$row['image']."  >
     </div>";
      }
