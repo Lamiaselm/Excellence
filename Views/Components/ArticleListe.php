@@ -13,15 +13,15 @@ class ArticleListe {
     }
     public function getArticleListe()
     {
-        echo "<div class='container'style='margin-top: 30px;'>
-             <div class='row'>
-             <div class='col-md-10 container-categ'>";
+        echo "
+             <div class='row' style='margin-top:40px;'>
+             <div class='col-md-11'style='margin:0 auto;'>";
         $result=$this->article->getArticle();
         foreach($result as $row)
         {
           echo "
           <div class='card-article'>
-                        <img src=".$row['image']." alt='icon'>
+                        <img src=".$row['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>".$row['titre']."</h3>
                         <p>".$row['description']."</p>
                         <a href='#'>Afficher la suite</a>
@@ -30,7 +30,7 @@ class ArticleListe {
         }
         echo "    </div>
                   </div>
-                  </div>";
+                  ";
     }
 }
 ?>
