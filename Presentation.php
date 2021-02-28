@@ -32,7 +32,7 @@ require_once __DIR__."/Views/Components/PresentationListe.php";
     $presentation= new PresentationListe();
     $presentation->getPresentationListe();
     $footer=new footer();
-    $footer->getFooter();
+   // $footer->getFooter();
  
  
 ?>

@@ -20,14 +20,32 @@ class PresentationListe {
         $result=$this->presentation->getPresentation();
         foreach($result as $row)
         {
+            if($row['image']==null)
+            {
+                echo "
+                <div class='col-md-6'style='margin:0 auto;'>
+                              <p>".$row['paragraphe']."</p>
+                              <form method='POST' enctype='multipart/form-data'> <input type='file' name='image'> <input type='submit' value='Ajouter une image' name='submit_image'></form>
+                              <form method='POST' action='./Views/PresentationPage.php'> <input type='submit' value='Ajouter un paragraphe' name='submit_file'></form>
+
+                 </div>
+                     ";
+                     if(isset($_POST["submit_image"]))
+                     {echo'hey';
+                        $this->presentation->addImage($row['ID_parag']);
+                     }
+                    
+
+            }else {
           echo "
-          <div class='card-article'>
-                        <img src=".$row['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
+          <div class='col-md-7'style='margin:0 auto;'>
                         <p>".$row['paragraphe']."</p>
-                        <a href='#'>Afficher la suite</a>
+                        <img src=".$row['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
+                        <form method='POST'action='./Views/PresentationPage.php'> <input type='submit' value='Ajouter un paragraphe' name='paragraphe'></form>
+
            </div>
                ";
-        }
+        }}
         echo "    </div>
                   </div>
                   ";

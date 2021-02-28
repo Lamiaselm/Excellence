@@ -25,6 +25,19 @@ class PresentationController
     {
         return $this->presentation->getPresentation();
     }
+    public function addImage($id)
+    {
+        $filename = $_FILES["image"]["name"]; 
+        $tempname = $_FILES["image"]["tmp_name"];     
+        $folder = __DIR__."/../Presentation/".$filename; 
+        $file_path="././Presentation/".$filename; 
+        if (move_uploaded_file($tempname, $folder))  { 
+            $msg = "Image uploaded successfully"; 
+        }else{ 
+            $msg = "Failed to upload image"; 
+      }
+        Presentation::addImage($id,$file_path);
+    }
 
 }
 
