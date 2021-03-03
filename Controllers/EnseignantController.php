@@ -8,9 +8,21 @@ class EnseignantController
 
     }
     
-    public function getInfo()
+    public function getInfo($id)
     {
         return $this->ens->getInfo($id);
+    }
+    public function getHeure($id)
+    {
+        return $this->ens->getHeure($id);
+    }
+    public function getClasseList($id)
+    {
+        return $this->ens->getClasseList($id);
+    }
+    public function getModuleList($id)
+    {
+        return $this->ens->getModuleList($id);
     }
 
 }

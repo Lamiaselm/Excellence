@@ -37,6 +37,13 @@ class Eleve
         return Db::execute_query($query);
 
     }
+    public static function getAll()
+    {
+        $db =Db::connect();
+        $query = "SELECT ID_user,nom,prenom FROM users WHERE type=3";
+        return Db::execute_query($query);
+
+    }
   
 }
 ?>

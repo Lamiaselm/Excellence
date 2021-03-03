@@ -18,7 +18,7 @@ session_start();
     <body style="background-color: #494848;">
     
      <div class="article-container" style="height:100%;">
-     <h2>Ajouter un article</h2>
+     <h2>Ajouter un utilisateur</h2>
      <form method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleFormControlInput1">Nom de l'utilisateur</label>
