@@ -24,10 +24,10 @@ class user{
         }
         return $users;
     }
-    public function register($nom,$prenom,$user_name,$email,$mdp,$adresse,$tel1,$tel2,$tel3,$type)
+    public function register($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type)
     {
         $db =Db::connect();
-        $query="INSERT INTO users (nom,prenom,user_name,email,mdp,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$adresse','$tel1','$tel2','$tel3','$type')";
+        $query="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
         $err = Db::execute_query($query);
 
     }

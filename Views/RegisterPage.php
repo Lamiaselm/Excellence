@@ -45,6 +45,10 @@ session_start();
     <input type="password" class="form-control" name="mdp_confirmer" placeholder="Confirmer Mot de passe">
   </div>
   <div class="form-group">
+    <label for="exampleFormControlInput1">date de naissance</label>
+    <input type="text" class="form-control" name="date" placeholder="Date daissance">
+  </div>
+  <div class="form-group">
     <label for="exampleFormControlSelect1">Type de l'utilisateur</label>
     <select class="form-control" name="type">
       <option value="">Choisir</option>
@@ -84,7 +88,7 @@ session_start();
     if(isset($_POST["ajouter"])){
       
      
-        $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+        $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
     }
    
    
