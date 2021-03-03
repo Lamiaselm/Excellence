@@ -242,10 +242,10 @@ body{
               foreach($result3 as $row)
               {
                 echo " <div class='row'>
-                      <div class='col-sm-4'>
+                      <div class='col-sm-5'>
                         <h7 class='mb-0'>" .$row['titre']."</h7>
                       </div>
-                      <div class='col-sm-8 text-secondary'>"
+                      <div class='col-sm-7 text-secondary'>"
                         .$row['description']."
                       </div>
                     </div>

@@ -21,7 +21,7 @@ class Eleve
     public static function getActivite($id)
     {
         $db =Db::connect();
-        $query = $query =  "SELECT activtes.titre, activte.description
+        $query = $query =  "SELECT activites.titre, activites.description
                             FROM activites
                             INNER JOIN eleves ON activites.ID_activite=eleves.ID_activite WHERE eleves.ID_user='$id'";
         return Db::execute_query($query);
