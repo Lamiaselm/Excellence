@@ -12,6 +12,14 @@ class EleveController
     {
         return $this->eleve->getInfo($id);
     }
+    public function getNote($id)
+    {
+        return $this->eleve->getNote($id);
+    }
+    public function getActivite($id)
+    {
+        return $this->eleve->getActivite($id);
+    }
 
 }
 

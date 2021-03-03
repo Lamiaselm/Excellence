@@ -186,37 +186,55 @@ body{
                   </div>
                 </div>
                 </div>
-              </div>
+              </div>"; } ?>
+             
+
+              
+           
               <div class='row gutters-sm'>
                 <div class='col-sm-6 mb-3'>
                   <div class='card h-100'>
                     <div class='card-body'>
                       <h6 class='d-flex align-items-center mb-3'><i class='material-icons text-info mr-2'>Mes notes</i></h6>
-                      <div class='row'>
-                      <div class='col-sm-6'>
-                        <h6 class='mb-0'>Module</h6>
+                      <?php 
+              $result2= $this->eleve->getNote($_SESSION['ID_user']);
+              foreach($result2 as $row)
+              {
+                echo " <div class='row'>
+                      <div class='col-sm-4'>
+                        <h7 class='mb-0'>" .$row['module']."</h7>
                       </div>
-                      <div class='col-sm-5 text-secondary'>"
-                        .$row['tel3']."
+                      <div class='col-sm-2 text-secondary'>"
+                        .$row['note']."
+                      </div>
+                      <div class='col-sm-6 text-secondary'>"
+                        .$row['observation']."
                       </div>
                     </div>
                     <hr>
+                    "; }?>
                     </div>
                   </div>
                 </div>
+                
                 <div class='col-sm-6 mb-3'>
                   <div class='card h-100'>
                     <div class='card-body'>
                       <h6 class='d-flex align-items-center mb-3'><i class='material-icons text-info mr-2'>Mes activités</i></h6>
-                      <div class='row'>
-                      <div class='col-sm-6'>
-                        <h6 class='mb-0'>Module</h6>
+                      <?php 
+              $result3= $this->eleve->getActivite($_SESSION['ID_user']);
+              foreach($result3 as $row)
+              {
+                echo " <div class='row'>
+                      <div class='col-sm-4'>
+                        <h7 class='mb-0'>" .$row['titre']."</h7>
                       </div>
-                      <div class='col-sm-5 text-secondary'>"
-                        .$row['tel3']."
+                      <div class='col-sm-8 text-secondary'>"
+                        .$row['description']."
                       </div>
                     </div>
                     <hr>
+                    "; }?>
                     </div>
                   </div>
                 </div>
@@ -225,7 +243,7 @@ body{
           </div>
         </div>
     </div>";
-  } ?>
+  
 </body>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
