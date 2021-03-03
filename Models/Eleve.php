@@ -5,7 +5,7 @@ class Eleve
     public static function getInfo($id)
     {
         $db =Db::connect();
-        $query = "SELECT * FROM eleves WHERE ID_eleve='$id'";
+        $query = "SELECT * FROM users WHERE ID_user='$id'";
         return Db::execute_query($query);
 
     }

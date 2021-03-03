@@ -8,7 +8,7 @@ class EleveController
 
     }
     
-    public function getInfo()
+    public function getInfo($id)
     {
         return $this->eleve->getInfo($id);
     }
