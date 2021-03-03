@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__."/../Models/Parent.php";
-class Parentontroller
+class ParentController
 {
     private $parent;
     public function __construct(){
@@ -8,9 +8,13 @@ class Parentontroller
 
     }
     
-    public function getInfo()
+    public function getInfo($id)
     {
         return $this->parent->getInfo($id);
+    }
+    public function getChildren($id)
+    {
+        return $this->parent->getChildren($id);
     }
 
 }
