@@ -20,6 +20,10 @@ class EleveController
     {
         return $this->eleve->getActivite($id);
     }
+    public function getClasse($id)
+    {
+        return $this->eleve->getClasse($id);
+    }
 
 }
 

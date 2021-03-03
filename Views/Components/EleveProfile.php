@@ -104,7 +104,7 @@ body{
        $result= $this->eleve->getInfo($_SESSION['ID_user']);
        foreach($result as $row)
        {
-       echo " <h4>".$row['nom']." ".$row['prenom']."</h4>
+                echo " <h4>".$row['nom']." ".$row['prenom']."</h4>";?>
       
         
                      
@@ -118,10 +118,25 @@ body{
               </div>
               <div class='card mt-3'>
                 <ul class='list-group list-group-flush'>
+                <?php 
+                $result0= $this->eleve->getClasse($_SESSION['ID_user']);
+               
+                foreach($result0 as $row0)
+                {
+                echo "
                 <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                 <h6 class='mb-0'>Classe/Groupe</h6>
-                <span class='text-secondary'>bootdey</span>
+                <span class='text-secondary'>".$row0['classe']."</span> 
               </li>
+              <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
+                <h6 class='mb-0'>Année</h6>
+                <span class='text-secondary'>".$row0['année']."</span> 
+              </li>
+              <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
+                <h6 class='mb-0'>Niveau</h6>
+                <span class='text-secondary'>".$row0['niveau']."</span> 
+              </li>"; }
+                ?>
                   <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                     <h6 class='mb-0'>Lien emploi du temps</h6>
                     <span class='text-secondary'>bootdey</span>
@@ -129,6 +144,7 @@ body{
                 </ul>
               </div>
             </div>
+            <?php  echo "
             <div class='col-md-8'>
               <div class='card mb-3'>
                 <div class='card-body'>

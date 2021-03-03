@@ -24,7 +24,17 @@ class Eleve
         $query = $query =  "SELECT activtes.titre, activte.description
                             FROM activites
                             INNER JOIN eleves ON activites.ID_activite=eleves.ID_activite WHERE eleves.ID_user='$id'";
-         return Db::execute_query($query);
+        return Db::execute_query($query);
+
+    }
+    public static function getClasse($id)
+    {
+        $db =Db::connect();
+        $query =  "SELECT *
+                   FROM classes
+                   INNER JOIN eleves ON classes.ID_classe=eleves.ID_classe WHERE eleves.ID_user='$id' LIMIT 1";
+        
+        return Db::execute_query($query);
 
     }
   
