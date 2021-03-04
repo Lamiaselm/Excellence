@@ -131,16 +131,14 @@ $classe_select=new Select();
     if(isset($_POST["ajouter_parent"])){
       
      
-        $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+        $userCTRL->registerParent($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
     }
     elseif(isset($_POST["ajouter_eleve"])){
-      
-     
-      $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+      $userCTRL->registerEleve($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['classe'],$_POST['parent']);
   }   elseif(isset($_POST["ajouter_ens"])){
       
      
-    $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+    $userCTRL->registerEns($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
 }
   
    

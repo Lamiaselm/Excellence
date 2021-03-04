@@ -24,7 +24,7 @@ class user{
         }
         return $users;
     }
-    public function register($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type)
+    public function registerParent($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type)
     {
         $db =Db::connect();
         $query="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
@@ -36,11 +36,17 @@ class user{
         $db =Db::connect();
         $query1="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
         $err = Db::execute_query($query1);
-        $query2="SELECT ID_user FROM users WHERE email='$email'";
-        return Db::execute_query($query2);
-        $query3="INSERT INTO eleves (ID_classe,ID_parent,ID_user) VALUES";
-        
+     
+        $query3="INSERT INTO eleves (ID_classe,ID_parent,ID_user) VALUES ('$classe','$parent',(SELECT ID_user FROM users WHERE email='$email'))";
+        $err = Db::execute_query($query3);
        
+
+    }
+    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type)
+    {
+        $db =Db::connect();
+        $query="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
+        $err = Db::execute_query($query);
 
     }
     public function getUserById($id){

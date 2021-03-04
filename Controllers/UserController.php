@@ -46,10 +46,28 @@ class UserController{
         
         return $auth;
     }
-    public function register($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3)
+    public function registerParent($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3)
     {  if($mdp==$mdp_confirmer)
         {   $mdp_hash=hash('md5',$mdp);
-            user::register($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type); 
+            user::registerParent($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type); 
+           // echo "user added";
+        }else {
+          //  echo "user not added";
+        }
+    }
+    public function registerEleve($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3,$classe,$parent)
+    {  if($mdp==$mdp_confirmer)
+        {   $mdp_hash=hash('md5',$mdp);
+            user::registerEleve($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type,$classe,$parent); 
+           // echo "user added";
+        }else {
+          //  echo "user not added";
+        }
+    }
+    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3)
+    {  if($mdp==$mdp_confirmer)
+        {   $mdp_hash=hash('md5',$mdp);
+            user::registerEns($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type); 
            // echo "user added";
         }else {
           //  echo "user not added";
