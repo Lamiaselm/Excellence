@@ -39,6 +39,163 @@ session_start();
     <a id="parent" href="#">  <li>  Ajouter un parent </li></a>
     </ul>
     </div>
+    
+     <div class="article-container" style="height:100%;display:none;" id="eleve-form">
+     <h2>Ajouter un utilisateur</h2>
+     <form method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Nom de l'utilisateur</label>
+    <input type="text" class="form-control" name="nom" placeholder="Nom">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Prénom de l'utilisateure</label>
+    <input type="text" class="form-control" name="prenom" placeholder="Prenom">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Username</label>
+    <input type="text" class="form-control" name="user_name" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Mot de passe</label>
+    <input type="password" class="form-control" name="mdp" placeholder="Mot de passe">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Confirmer Mot de passe</label>
+    <input type="password" class="form-control" name="mdp_confirmer" placeholder="Confirmer Mot de passe">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">date de naissance</label>
+    <input type="text" class="form-control" name="date" placeholder="Date daissance">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Classe</label>
+    <select class="form-control" name="type">
+      <option value="">Choisir</option>
+      <option value="2">Enseignant</option>
+      <option value="3">Elève</option>
+      <option value="4">Parent</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Adresse</label>
+    <input type="text" class="form-control" name="adresse" placeholder="Adresse">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Numéro de téléphone 1</label>
+    <input type="text" class="form-control" name="tel1" placeholder="Numéro de téléphone 1">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Numéro de téléphone 2</label>
+    <input type="text" class="form-control" name="tel2" placeholder="Numéro de téléphone 2">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Numéro de téléphone 3</label>
+    <input type="text" class="form-control" name="tel3" placeholder="Numéro de téléphone 3">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Ajouter</label>
+    <input type="submit" class="form-control" name="ajouter"value="ajouter">
+  </div>
+  
+
+</form>
+<?php 
+    require_once __DIR__."/../Controllers/UserController.php";
+    $userCTRL = new UserController();
+    if(isset($_POST["ajouter"])){
+      
+     
+        $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+    }
+   
+   
+   ?>
+     </div>
+     <div class="article-container" style="height:100%;display:none;" id="ens-form">
+     <h2>Ajouter un utilisateur</h2>
+     <form method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Nom de l'utilisateur</label>
+    <input type="text" class="form-control" name="nom" placeholder="Nom">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Prénom de l'utilisateure</label>
+    <input type="text" class="form-control" name="prenom" placeholder="Prenom">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Username</label>
+    <input type="text" class="form-control" name="user_name" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Mot de passe</label>
+    <input type="password" class="form-control" name="mdp" placeholder="Mot de passe">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Confirmer Mot de passe</label>
+    <input type="password" class="form-control" name="mdp_confirmer" placeholder="Confirmer Mot de passe">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">date de naissance</label>
+    <input type="text" class="form-control" name="date" placeholder="Date daissance">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Type de l'utilisateur</label>
+    <select class="form-control" name="type">
+      <option value="">Choisir</option>
+      <option value="2">Enseignant</option>
+      <option value="3">Elève</option>
+      <option value="4">Parent</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Adresse</label>
+    <input type="text" class="form-control" name="adresse" placeholder="Adresse">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Numéro de téléphone 1</label>
+    <input type="text" class="form-control" name="tel1" placeholder="Numéro de téléphone 1">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Numéro de téléphone 2</label>
+    <input type="text" class="form-control" name="tel2" placeholder="Numéro de téléphone 2">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Numéro de téléphone 3</label>
+    <input type="text" class="form-control" name="tel3" placeholder="Numéro de téléphone 3">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Ajouter</label>
+    <input type="submit" class="form-control" name="ajouter"value="ajouter">
+  </div>
+  
+
+</form>
+<?php 
+    require_once __DIR__."/../Controllers/UserController.php";
+    $userCTRL = new UserController();
+    if(isset($_POST["ajouter"])){
+      
+     
+        $userCTRL->register($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+    }
+   
+   
+   ?>
+     </div>
      <div class="article-container" style="height:100%;display:none;" id="ens-form">
      <h2>Ajouter un utilisateur</h2>
      <form method="POST" enctype="multipart/form-data">
