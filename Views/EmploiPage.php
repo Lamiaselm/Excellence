@@ -33,15 +33,15 @@ $classe_select=new Select();
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Jour</label>
-    <input type="text" class="form-control" name="menu" placeholder="repas">
+    <input type="text" class="form-control" name="jour" placeholder="Jour de la semaine">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Heure début </label>
-    <input type="datetime-local" class="form-control" name="jour" >
+    <input type="time" class="form-control" name="heure_debut" >
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Heure fin</label>
-    <input type="datetime-local" class="form-control" name="jour" >
+    <input type="time" class="form-control" name="heure_fin" >
   </div>
   <div class='form-group' id='module' >
     <label for='exampleFormControlSelect1'>Modules</label>
@@ -72,13 +72,13 @@ $classe_select=new Select();
 
 </form>
 <?php 
-    require_once __DIR__."/../Controllers/RepasController.php";
+    require_once __DIR__."/../Controllers/EmploiController.php";
    
-    $repasCTRL = new RepasController();
+    $emploiCTRL = new EmploiController();
     if(isset($_POST["ajouter"])){
       
         
-        $repasCTRL->addRepas($_POST['jour'],$_POST['menu']);
+        $emploiCTRL->addEmploi($_POST['classe'],$_POST['jour'],$_POST['heure_debut'],$_POST['heure_fin'],$_POST['module'],$_POST['ens']);
     }
    
    

@@ -7,9 +7,9 @@ class EmploiController
         $this->emploi=new Emploi();
 
     }
-    public function addemploi($titre,$descrip,$concerne)
+    public function addEmploi($classe,$jour,$heure_debut,$heure_fin,$module,$ens)
     {
-        Emploi::addemploi($titre,$file_path,$descrip,$concerne);
+        Emploi::addemploi($classe,$jour,$heure_debut,$heure_fin,$module,$ens);
     } 
      
         
