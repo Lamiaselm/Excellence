@@ -74,7 +74,7 @@ $classe_select=new Select();
   </div>
   <div class='form-group' id='module' style='display:none;'>
     <label for='exampleFormControlSelect1'>modules</label>
-    <select class='form-control' name='module'>
+    <select class='form-control' name='module[]' multiple="multiple">
     <option value=' ' >Choisir module</option>
     
    <?php
@@ -95,6 +95,10 @@ $classe_select=new Select();
   <div class="form-group">
     <label for="exampleFormControlInput1">Adresse</label>
     <input type="text" class="form-control" name="adresse" placeholder="Adresse">
+  </div>
+  <div class="form-group" id="heure" style="display:none;">
+    <label for="exampleFormControlInput1">Heure de réception</label>
+    <input type="text" class="form-control" name="heure" placeholder="heure de reception">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Numéro de téléphone 1</label>
@@ -135,10 +139,11 @@ $classe_select=new Select();
     }
     elseif(isset($_POST["ajouter_eleve"])){
       $userCTRL->registerEleve($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['classe'],$_POST['parent']);
-  }   elseif(isset($_POST["ajouter_ens"])){
-      
-     
-    $userCTRL->registerEns($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
+  }  
+  
+  elseif(isset($_POST["ajouter_ens"])){
+
+    $userCTRL->registerEns($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['heure']);
 }
   
    
@@ -161,18 +166,21 @@ $(document).ready(function()
  $("#select").change(function()
  {
   if($(this).val() == "2")
-  { $("#classe").hide();
+  { 
+     $("#classe").hide();
     $("#parent").hide();
     $("#parent").hide();
     $("#submit_eleve").hide();
     $("#submit_parent").hide();
     $("#module").show();
+    $("#heure").show();
     $("#submit_ens").show();
 
   }
   else
  if($(this).val() == "3") {
    $("#module").hide();
+   $("#heure").hide();
    $("#submit_ens").hide();
     $("#submit_parent").hide();
    $("#classe").show();
@@ -183,6 +191,7 @@ $(document).ready(function()
  if($(this).val() == "4") {
   $("#module").hide();
   $("#classe").hide();
+  $("#heure").hide();
   $("#parent").hide();
   $("#submit_eleve").hide();
   $("#submit_ens").hide();

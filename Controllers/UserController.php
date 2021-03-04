@@ -64,10 +64,18 @@ class UserController{
           //  echo "user not added";
         }
     }
-    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3)
-    {  if($mdp==$mdp_confirmer)
+    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3,$heure)
+    {    
+       
+         if(($mdp==$mdp_confirmer)&&(!empty($_POST['module'])))
         {   $mdp_hash=hash('md5',$mdp);
-            user::registerEns($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type); 
+            foreach($_POST['module'] as $value)
+            {  
+                $module=$value;
+                user::registerEns($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type,$heure,$module); 
+
+            }
+
            // echo "user added";
         }else {
           //  echo "user not added";

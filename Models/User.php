@@ -42,11 +42,18 @@ class user{
        
 
     }
-    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type)
+    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type,$heure,$module)
     {
         $db =Db::connect();
-        $query="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
-        $err = Db::execute_query($query);
+        $query1="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
+        $err = Db::execute_query($query1);
+     
+        $query3="INSERT INTO enseignants (ID_user,heure_reception) VALUES ((SELECT ID_user FROM users WHERE email='$email'),'$heure')";
+        $err = Db::execute_query($query3);
+
+        $query3="INSERT INTO enseigner (ID_ens,ID_module) VALUES ((SELECT ID_user FROM users WHERE email='$email'),'$module')";
+        $err = Db::execute_query($query3);
+        
 
     }
     public function getUserById($id){
