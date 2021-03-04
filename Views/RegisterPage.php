@@ -15,9 +15,31 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Register page</title>
 </head>
+<script>
+  $(document).ready(function(){
+    $("#eleve").click(function(){
+      $("#ul").css("dislay","none");
+      $("#eleve-form").show();
+    });
+    $("#ens").click(function(){
+      $("#ul").hide();
+      $("#ens-form").show();
+    });
+    $("#parent").click(function(){
+      $("#ul").css("dislay","none");
+      $("#parent-form").show();
+    });
+  })
+</script>
     <body style="background-color: #494848;">
-    
-     <div class="article-container" style="height:100%;">
+    <div class="ul" id="ul" >
+    <ul>
+    <a id="eleve" href="#">  <li>  Ajouter un érudiant </li></a>
+    <a id="ens" href="#">  <li>  Ajouter un enseignant </li></a>
+    <a id="parent" href="#">  <li>  Ajouter un parent </li></a>
+    </ul>
+    </div>
+     <div class="article-container" style="height:100%;display:none;" id="ens-form">
      <h2>Ajouter un utilisateur</h2>
      <form method="POST" enctype="multipart/form-data">
   <div class="form-group">
@@ -57,6 +79,7 @@ session_start();
       <option value="4">Parent</option>
     </select>
   </div>
+
   <div class="form-group">
     <label for="exampleFormControlInput1">Adresse</label>
     <input type="text" class="form-control" name="adresse" placeholder="Adresse">
