@@ -10,7 +10,7 @@ class ParentProfile {
     public function __construct(){
         $this->parent= new ParentController();
     }
-    public function getInfo()
+    public function getInfo($id_parent)
     {
 
 ?>
@@ -37,7 +37,7 @@ class ParentProfile {
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                     <?php 
-       $result= $this->parent->getInfo($_SESSION['ID_user']);
+       $result= $this->parent->getInfo($id_parent);
        foreach($result as $row)
        {
                 echo " <h4>".$row['nom']." ".$row['prenom']."</h4>";?>
@@ -56,7 +56,7 @@ class ParentProfile {
                 <ul class='list-group list-group-flush'>
                 <h6 class='d-flex align-items-center mb-3' style='margin:10px;'><i class='material-icons text-info mr-2'>Mes enfants</i></h6>
                 <?php 
-                $result0= $this->parent->getChildren($_SESSION['ID_user']);
+                $result0= $this->parent->getChildren($id_parent);
                
                 foreach($result0 as $row0)
                 {
@@ -70,7 +70,7 @@ class ParentProfile {
                       <div class='col-sm-5 text-secondary'>"
                         .$row0['prenom']."
                       </div>
-                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/listeEleve.php?".$row['nom']."'>Link</a>
+                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./ProfilePage.php?id_eleve=".$row0['ID_user']."'>Link</a>
                       </div>
                     </div>
               </li>

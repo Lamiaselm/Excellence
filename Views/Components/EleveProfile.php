@@ -203,7 +203,7 @@ class EleveProfile {
             </div>
           </div>
         </div>
-    </div>";
+    </div>
   
 </body>
 

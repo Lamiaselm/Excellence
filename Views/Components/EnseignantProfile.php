@@ -10,7 +10,7 @@ class EnseignantProfile {
     public function __construct(){
         $this->ens= new EnseignantController();
     }
-    public function getInfo()
+    public function getInfo($id_ens)
     {
 
 ?>
@@ -37,7 +37,7 @@ class EnseignantProfile {
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                     <?php 
-       $result= $this->ens->getInfo($_SESSION['ID_user']);
+       $result= $this->ens->getInfo($id_ens);
        foreach($result as $row)
        {
                 echo " <h4>".$row['nom']." ".$row['prenom']."</h4>";?>
@@ -56,7 +56,7 @@ class EnseignantProfile {
                 <ul class='list-group list-group-flush'>
                 
                 <?php 
-                $result0= $this->ens->getHeure($_SESSION['ID_user']);
+                $result0= $this->ens->getHeure($id_ens);
                
                 foreach($result0 as $row0)
                 {
@@ -156,7 +156,7 @@ class EnseignantProfile {
                     <div class='card-body'>
                       <h6 class='d-flex align-items-center mb-3'><i class='material-icons text-info mr-2'>Mes modules</i></h6>
                       <?php 
-              $result2= $this->ens->getModuleList($_SESSION['ID_user']);
+              $result2= $this->ens->getModuleList($id_ens);
               foreach($result2 as $row)
               {
                 echo " <div class='row'>
@@ -175,7 +175,7 @@ class EnseignantProfile {
                     <div class='card-body'>
                       <h6 class='d-flex align-items-center mb-3'><i class='material-icons text-info mr-2'>Mes classes</i></h6>
                       <?php 
-              $result3= $this->ens->getClasseList($_SESSION['ID_user']);
+              $result3= $this->ens->getClasseList($id_ens);
               foreach($result3 as $row)
               {
                 echo " <div class='row'>
