@@ -78,6 +78,11 @@ class user{
         $requete = "SELECT ID_user,nom,prenom FROM users WHERE type=4";
         return Db::execute_query($requete);
     }
+    public function selectEns(){
+        $db =Db::connect();
+        $requete = "SELECT ID_user,nom,prenom FROM users WHERE type=2";
+        return Db::execute_query($requete);
+    }
 
     public static function isAuth(){
         return self::$auth;

@@ -47,7 +47,7 @@ class EleveProfile {
                       
                      
                       <button class='btn btn-primary'>Modifier</button>
-                      <button class='btn btn-outline-primary'>Message</button>
+                      
                     </div>
                   </div>
                 </div>
@@ -196,6 +196,7 @@ class EleveProfile {
                     </div>
                     <hr>
                     "; }?>
+                   <a href="AddActivity.php">    <button class='btn btn-outline-primary'>Ajouter</button></a>
                     </div>
                   </div>
                 </div>

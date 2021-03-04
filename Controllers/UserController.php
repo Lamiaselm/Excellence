@@ -93,5 +93,8 @@ class UserController{
     {
         return $this->model->selectParent();
     }
-    
+    public function selectEns()
+    {
+        return $this->model->selectEns();
+    }
 }

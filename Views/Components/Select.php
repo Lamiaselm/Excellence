@@ -41,6 +41,16 @@ class Select {
         }
 
     }
+    public function selectEns()
+    {
+        
+        $result4=$this->select->selectEns();
+        foreach($result4 as $row4)
+        {
+            echo "<option value=".$row4['ID_user']." >".$row4['nom']."</option>";
+        }
+
+    }
 }
 ?>
 
