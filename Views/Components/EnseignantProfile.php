@@ -185,7 +185,9 @@ class EnseignantProfile {
                       <div class='col-sm-4 text-secondary'>"
                         .$row['classe']."
                       </div>
-                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/TableEleve.php?id=".$row['ID_classe']."&class=".$row['classe']."'>Link</a>
+                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/TableEleve.php?id=".$row['ID_classe']."&class=".$row['classe']."'>Liste eleves</a>
+                      </div>
+                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/TableEmploi.php?id_classe=".$row['ID_classe']."&classe=".$row['classe']."'>Lien emploi</a>
                       </div>
                     </div>
                     <hr>

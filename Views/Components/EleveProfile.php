@@ -74,7 +74,7 @@ class EleveProfile {
               </li>
                   <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                     <h6 class='mb-0'>Lien emploi du temps</h6>
-                    <span class='text-secondary'><a target='_blank' href='./Components/TableEmploi.php?id_classe=".$row['ID_classe']."&classe=".$row['classe']."'>Link</a></span>
+                    <span class='text-secondary'><a target='_blank' href='./Components/TableEmploi.php?id_classe=".$row0['ID_classe']."&classe=".$row0['classe']."'>Link</a></span>
                   </li>"; }
                   ?>
                 </ul>

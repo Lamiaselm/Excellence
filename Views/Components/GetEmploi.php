@@ -10,34 +10,28 @@ class GetEmploi {
     public function __construct() {
        return $this->emploi= new EmploiController();
     } 
-   public function getEmploi(){
+   public function getEmploi($id_classe,$classe){
 
 ?>
 
 
-<body>
+
 
 <div class="container" style="margin-top:70px;">
+<h3 style='text-align:center;'>Emploi du temps de la classe  :  <?php $classe ?> </h3>
+    <table class='table table-bordered'>
+        
+         <tbody>
 <?php 
-        $result=$this->emploi->getAll($id_class);
+        $result=$this->emploi->getAll($id_classe);
         foreach($result as $row )
         {
             echo "
-     <h3 style='text-align:center;'>Liste des éléves de la classe  :  ".$class." </h3>
-      <table class='table table-bordered'>
-        <thead class='thead-dark' style='color:white;background-color:#494848;'>
-          <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th> Lien profil</th>
-          </tr>
-        </thead>
-        <tbody>
-      <tr>
+           <tr>
             <td>".$row['nom']."</td>
             <td>".$row['prenom']."</td>
             <td><a target='_blank' href='../ProfilePage.php?id_eleve=".$row['ID_user']."'>Lien profil</a></td>
-          </tr>";
+           </tr>";
         }
        
         ?>
@@ -45,7 +39,7 @@ class GetEmploi {
         </tbody>
       </table>
     </div>
-</body>
+
 
   <?php
       }}

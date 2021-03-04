@@ -32,8 +32,15 @@ $classe_select=new Select();
    </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Jour</label>
-    <input type="text" class="form-control" name="jour" placeholder="Jour de la semaine">
+    <label for="exampleFormControlSelect1">Jour de la semaine</label>
+    <select class="form-control" name="jour">
+      <option value="">Choisir</option>
+      <option value="1" >Dimanche</option>
+      <option value="2" >Lundi</option>
+      <option value="3" >Mardi</option>
+      <option value="4" >Mercredi</option>
+      <option value="5" >Jeudi</option>
+    </select>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Heure début </label>
