@@ -55,5 +55,17 @@ class UserController{
           //  echo "user not added";
         }
     }
+    public function selectClasse()
+    {
+        return $this->model->selectClasse();
+    }
+    public function selectModule()
+    {
+        return $this->model->selectModule();
+    }
+    public function selectParent()
+    {
+        return $this->model->selectParent();
+    }
     
 }

@@ -47,6 +47,24 @@ class user{
         $requete = "SELECT * FROM users WHERE ID_user = '$id' LIMIT 1";
         return Db::execute_query($requete)[0];
     }
+    public function selectClasse(){
+        echo 'classe';
+        $db =Db::connect();
+        $requete = "SELECT ID_classe,classe FROM classes";
+        return Db::execute_query($requete);
+    }
+    public function selectModule(){
+        $db =Db::connect();
+        echo 'module';
+        $requete = "SELECT ID_module,module FROM modules";
+        return Db::execute_query($requete);
+        print_r($requete);
+    }
+    public function selectParent(){
+        $db =Db::connect();
+        $requete = "SELECT ID_user,nom,prenom FROM users WHERE type=4";
+        return Db::execute_query($requete);
+    }
 
     public static function isAuth(){
         return self::$auth;

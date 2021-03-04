@@ -1,7 +1,9 @@
 <?php 
 
-session_start();
 
+require_once __DIR__."./Components/Select.php";
+session_start();
+$classe_select=new Select();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,29 +65,32 @@ session_start();
   <div class="form-group" id="classe" style="display:none;">
     <label for="exampleFormControlSelect1">Classes</label>
     <select class="form-control" name="classe">
-      <option value="">Choisir</option>
-      <option value="2" >2CSSIL1</option>
-      <option value="3" >2CSSIL2</option>
-      <option value="4" >2CSSIQ1</option>
+    <option value=" " >Choisir classe</option>
+   <?php 
+ 
+   $classe_select->selectClasse();
+  ?>
+   </select>
+  </div>
+  <div class='form-group' id='module' style='display:none;'>
+    <label for='exampleFormControlSelect1'>modules</label>
+    <select class='form-control' name='module'>
+    <option value=' ' >Choisir module</option>
+    
+   <?php
+   $classe_select->selectModule();
+  ?>
     </select>
   </div>
-  <div class="form-group" id="module" style="display:none;">
-    <label for="exampleFormControlSelect1">modules</label>
-    <select class="form-control" name="type">
-      <option value="">Choisir</option>
-      <option value="2" >Outils</option>
-      <option value="3" >Web</option>
-      <option value="4" >Analyse</option>
+  <div class='form-group' id='parent' style='display:none;'>
+    <label for='exampleFormControlSelect1'>Parents</label>
+    <select class='form-control' name='parent'>
+    <option value=' ' >Choisir parent </option>
+    <?php
+    $classe_select->selectParent();
+    ?>
     </select>
-  </div>
-  <div class="form-group" id="parent" style="display:none;">
-    <label for="exampleFormControlSelect1">Parents</label>
-    <select class="form-control" name="type">
-      <option value="">Choisir</option>
-      <option value="2" >Outils</option>
-      <option value="3" >Web</option>
-      <option value="4" >Analyse</option>
-    </select>
+   
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Adresse</label>
