@@ -46,6 +46,7 @@ class Eleve
         return Db::execute_query($query);
 
     }
+   
   
 }
 ?>

@@ -97,4 +97,9 @@ class UserController{
     {
         return $this->model->selectEns();
     }
+    public function selectActivities()
+    {
+        return $this->model->selectActivities();
+    }
+    
 }

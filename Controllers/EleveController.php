@@ -28,6 +28,10 @@ class EleveController
     {
         return $this->eleve->getAll($id_class);
     }
+    public function getActivities()
+    {
+        return $this->eleve->getActivities();
+    }
 
 }
 

@@ -14,10 +14,19 @@ class EmploiController
      
         
     
-    public function getAll($id_classe)
+    public function getAll($id_classe,$id_day)
     {
-        return $this->emploi->getAll($id_classe);
+        return $this->emploi->getAll($id_classe,$id_day);
     }
+    public function getEns($id_ens)
+    {
+        return $this->emploi->getEns($id_ens);
+    }
+    public function getModule($id_module)
+    {
+        return $this->emploi->getModule($id_module);
+    }
+
 
 }
 
