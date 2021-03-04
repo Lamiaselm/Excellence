@@ -14,9 +14,9 @@ class EmploiController
      
         
     
-    public function getemploi()
+    public function getAll()
     {
-        return $this->emploi->getemploi();
+        return $this->emploi->getAll();
     }
 
 }

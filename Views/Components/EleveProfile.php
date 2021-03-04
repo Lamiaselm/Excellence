@@ -71,12 +71,12 @@ class EleveProfile {
               <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                 <h6 class='mb-0'>Niveau</h6>
                 <span class='text-secondary'>".$row0['niveau']."</span> 
-              </li>"; }
-                ?>
+              </li>
                   <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                     <h6 class='mb-0'>Lien emploi du temps</h6>
-                    <span class='text-secondary'>bootdey</span>
-                  </li>
+                    <span class='text-secondary'><a target='_blank' href='./Components/TableEmploi.php?id_classe=".$row['ID_classe']."&classe=".$row['classe']."'>Link</a></span>
+                  </li>"; }
+                  ?>
                 </ul>
               </div>
             </div>
