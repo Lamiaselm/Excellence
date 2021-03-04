@@ -118,6 +118,7 @@ body{
               </div>
               <div class='card mt-3'>
                 <ul class='list-group list-group-flush'>
+                
                 <?php 
                 $result0= $this->ens->getHeure($_SESSION['ID_user']);
                
@@ -248,7 +249,7 @@ body{
                       <div class='col-sm-4 text-secondary'>"
                         .$row['classe']."
                       </div>
-                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/listeEleve.php?".$row['ID_classe']."'>Link</a>
+                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/TableEleve.php?id=".$row['ID_classe']."&class=".$row['classe']."'>Link</a>
                       </div>
                     </div>
                     <hr>

@@ -106,6 +106,10 @@ body{
        {
                 echo " <h4>".$row['nom']." ".$row['prenom']."</h4>";?>
       
+        
+                     
+                      
+                     
                       <button class='btn btn-primary'>Modifier</button>
                       <button class='btn btn-outline-primary'>Message</button>
                     </div>
@@ -114,24 +118,28 @@ body{
               </div>
               <div class='card mt-3'>
                 <ul class='list-group list-group-flush'>
+                <h6 class='d-flex align-items-center mb-3' style='margin:10px;'><i class='material-icons text-info mr-2'>Mes enfants</i></h6>
                 <?php 
-                $result0= $this->parent->geChildren($_SESSION['ID_user']);
+                $result0= $this->parent->getChildren($_SESSION['ID_user']);
                
                 foreach($result0 as $row0)
                 {
                 echo "
                 <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
-                <h6 class='mb-0'>Heures de récéption</h6>
-                <span class='text-secondary'>".$row0['heure_reception']."</span> 
+               
+                <div class='row' style='width:100%;'>
+                      <div class='col-sm-4'>
+                        <h7 class='mb-0'>" .$row0['nom']."</h7>
+                      </div>
+                      <div class='col-sm-4 text-secondary'>"
+                        .$row0['prenom']."
+                      </div>
+                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./Components/listeEleve.php?".$row['nom']."'>Link</a>
+                      </div>
+                    </div>
               </li>
-              <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
-                <h6 class='mb-0'>Total des heures de travail</h6>
-                <span class='text-secondary'>".$row0['heure_travail']."</span> 
-              </li>
-              <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
-                <h6 class='mb-0'>Lien Emploi du temps</h6>
-                <span class='text-secondary'>".$row0['emploi_du_temps']."</span> 
-              </li>";}?>
+              "; }
+                ?>
                   
                 </ul>
               </div>
@@ -204,8 +212,13 @@ body{
                 </div>
                 </div>
               </div>"; } ?>
-        
-               
+             
+
+              
+           
+              
+                
+                
               </div>
             </div>
           </div>

@@ -24,6 +24,10 @@ class EleveController
     {
         return $this->eleve->getClasse($id);
     }
+    public function getAll($id_class)
+    {
+        return $this->eleve->getAll($id_class);
+    }
 
 }
 

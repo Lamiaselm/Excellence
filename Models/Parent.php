@@ -12,7 +12,10 @@ class Parents
     public static function getChildren($id)
     {
         $db =Db::connect();
-        $query = "SELECT * FROM parents WHERE ID_eleve='$id'";
+        $query =  "SELECT users.nom,users.prenom
+                   FROM users
+                   INNER JOIN eleves ON users.ID_user=eleves.ID_user WHERE eleves.ID_parent='$id' ";
+        
         return Db::execute_query($query);
 
     }

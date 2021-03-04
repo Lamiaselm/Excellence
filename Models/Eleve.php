@@ -23,7 +23,7 @@ class Eleve
         $db =Db::connect();
         $query = $query =  "SELECT activites.titre, activites.description
                             FROM activites
-                            INNER JOIN eleves ON activites.ID_activite=eleves.ID_activite WHERE eleves.ID_user='$id'";
+                            INNER JOIN participer ON activites.ID_activite=participer.ID_activite WHERE participer.ID_eleve='$id'";
         return Db::execute_query($query);
 
     }
@@ -32,15 +32,17 @@ class Eleve
         $db =Db::connect();
         $query =  "SELECT *
                    FROM classes
-                   INNER JOIN eleves ON classes.ID_classe=eleves.ID_classe WHERE eleves.ID_user='$id' LIMIT 1";
+                   INNER JOIN eleves ON classes.ID_classe=eleves.ID_classe WHERE eleves.ID_user='$id'";
         
         return Db::execute_query($query);
 
     }
-    public static function getAll()
+    public static function getAll($id_class)
     {
         $db =Db::connect();
-        $query = "SELECT ID_user,nom,prenom FROM users WHERE type=3";
+        $query =  "SELECT users.ID_user,users.nom,users.prenom
+        FROM users
+        INNER JOIN eleves ON users.ID_user=eleves.ID_user WHERE eleves.ID_classe='$id_class'";
         return Db::execute_query($query);
 
     }

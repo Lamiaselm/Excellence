@@ -18,11 +18,12 @@ class Enseignant
     }
     public static function getClasseList($id)
     {
+        
         $db =Db::connect();
-        $query =  "SELECT *
-                   FROM classes
-                   INNER JOIN enseignants ON classes.ID_classe=enseignants.ID_classe WHERE enseignants.ID_user='$id'";
-        return Db::execute_query($query);;
+        $query = "SELECT *
+                            FROM classes
+                            INNER JOIN classe_ens ON classes.ID_classe=classe_ens.ID_classe WHERE classe_ens.ID_ens='$id'";
+        return Db::execute_query($query);
 
     }
     public static function getModuleList($id)
