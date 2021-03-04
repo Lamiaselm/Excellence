@@ -10,7 +10,7 @@ class EleveProfile {
     public function __construct(){
         $this->eleve= new EleveController();
     }
-    public function getInfo()
+    public function getInfo($id_eleve)
     {
 
 ?>
@@ -101,7 +101,7 @@ body{
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                     <?php 
-       $result= $this->eleve->getInfo($_SESSION['ID_user']);
+       $result= $this->eleve->getInfo($id_eleve);
        foreach($result as $row)
        {
                 echo " <h4>".$row['nom']." ".$row['prenom']."</h4>";?>
@@ -119,7 +119,7 @@ body{
               <div class='card mt-3'>
                 <ul class='list-group list-group-flush'>
                 <?php 
-                $result0= $this->eleve->getClasse($_SESSION['ID_user']);
+                $result0= $this->eleve->getClasse($id_eleve);
                
                 foreach($result0 as $row0)
                 {
@@ -222,7 +222,7 @@ body{
                     <div class='card-body'>
                       <h6 class='d-flex align-items-center mb-3'><i class='material-icons text-info mr-2'>Mes notes</i></h6>
                       <?php 
-              $result2= $this->eleve->getNote($_SESSION['ID_user']);
+              $result2= $this->eleve->getNote($id_eleve);
               foreach($result2 as $row)
               {
                 echo " <div class='row'>
@@ -247,7 +247,7 @@ body{
                     <div class='card-body'>
                       <h6 class='d-flex align-items-center mb-3'><i class='material-icons text-info mr-2'>Mes activités</i></h6>
                       <?php 
-              $result3= $this->eleve->getActivite($_SESSION['ID_user']);
+              $result3= $this->eleve->getActivite($id_eleve);
               foreach($result3 as $row)
               {
                 echo " <div class='row'>

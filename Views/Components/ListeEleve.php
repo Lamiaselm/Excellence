@@ -24,7 +24,7 @@ class ListeEleve {
         foreach($result as $row )
         {
             echo "
-     <h3 style='text-align:center;'>Liste des éléves de la classe".$class." </h3>
+     <h3 style='text-align:center;'>Liste des éléves de la classe  :  ".$class." </h3>
       <table class='table table-bordered'>
         <thead class='thead-dark' style='color:white;background-color:#494848;'>
           <tr>
@@ -37,7 +37,7 @@ class ListeEleve {
       <tr>
             <td>".$row['nom']."</td>
             <td>".$row['prenom']."</td>
-            <td><a href='EleveProfile.php?id_eleve=".$row['ID_user']."'>Lien profil</a></td>
+            <td><a target='_blank' href='../ProfilePage.php?id_eleve=".$row['ID_user']."'>Lien profil</a></td>
           </tr>";
         }
        
