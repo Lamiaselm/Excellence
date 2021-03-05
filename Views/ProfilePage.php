@@ -3,7 +3,7 @@
 require_once __DIR__."../Components/EleveProfile.php";
 require_once __DIR__."../Components/EnseignantProfile.php";
 require_once __DIR__."../Components/ParentProfile.php";
-if (isset($_GET['id_eleve']))
+if ((isset($_GET['id_eleve']))&& (isset($_GET['ens'])))
 {  
     
     $eleve = new EleveProfile();

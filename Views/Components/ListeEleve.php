@@ -37,7 +37,7 @@ class ListeEleve {
       <tr>
             <td>".$row['nom']."</td>
             <td>".$row['prenom']."</td>
-            <td><a target='_blank' href='../ProfilePage.php?id_eleve=".$row['ID_user']."'>Lien profil</a></td>
+            <td><a target='_blank' href='../ProfilePage.php?id_eleve=".$row['ID_user']."&ens=true'>Lien profil</a></td>
           </tr>";
         }
        

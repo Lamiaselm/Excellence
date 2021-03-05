@@ -172,7 +172,8 @@ class EleveProfile {
                         .$row['observation']."
                       </div>
                     </div>
-                    <input type='submit' name='submit_modifier' value='Modifer note'style='background-color:#3AD8ED;color:white;border:none;'>
+                    <input type='submit' name='submit_modifier' value='Modifer note'style='background-color:#3AD8ED;color:white;border:none;'";if(isset($_SESSION['auth'])){echo 'disabled';} echo">
+                    <button onClick='window.location.reload();' style='border:none;background-color:#ffffff;'><img src='https://img.icons8.com/android/24/000000/refresh.png'/></button>
                     </form>
                     <hr>
                     "; 
@@ -182,6 +183,7 @@ class EleveProfile {
                     }
                     
                     }?>
+                    
                     </div>
                   </div>
                 </div>
