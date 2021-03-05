@@ -49,6 +49,7 @@ class Eleve
     public function addActivity($titre,$descrip,$id)
     {
         $db =Db::connect();
+       
         $query1="INSERT INTO activites (titre,description) VALUES ('$titre','$descrip')";
         $err = Db::execute_query($query1);
 
@@ -60,9 +61,14 @@ class Eleve
     public static function modifActivity($id,$choix)
     {
         $db =Db::connect();
-        echo $choix;
-        $query3="INSERT INTO participer (ID_eleve,ID_activite) VALUES ('$id',(SELECT ID_activite FROM activites WHERE ID_activite='$choix'))";
-        $err = Db::execute_query($query3);
+        $exist="SELECT * FROM participer WHERE ID_activite='$choix' AND ID_eleve='$id' ";
+        $err = Db::execute_query($exist);
+        if(count($err)==0)
+        {
+            $query3="INSERT INTO participer (ID_eleve,ID_activite) VALUES ('$id',(SELECT ID_activite FROM activites WHERE ID_activite='$choix'))";
+            $err = Db::execute_query($query3);
+        }
+       
 
     }
    
