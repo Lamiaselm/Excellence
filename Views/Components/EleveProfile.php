@@ -161,19 +161,27 @@ class EleveProfile {
               $result2= $this->eleve->getNote($id_eleve);
               foreach($result2 as $row)
               {
-                echo " <div class='row'>
+                echo " <form method='POST' enctype='multipart/form-data'>
+                     <div class='row'>
                       <div class='col-sm-4'>
                         <h7 class='mb-0'>" .$row['module']."</h7>
                       </div>
-                      <div class='col-sm-2 text-secondary'>"
-                        .$row['note']."
+                      <div class='col-sm-2 text-secondary'><input value=".$row['note']." name='note_modif' style='border:none;outline:none;'> <input type='hidden' value=".$row['ID_note']." name='ID_note'>
                       </div>
                       <div class='col-sm-6 text-secondary'>"
                         .$row['observation']."
                       </div>
                     </div>
+                    <input type='submit' name='submit_modifier' value='Modifer note'style='background-color:#3AD8ED;color:white;border:none;'>
+                    </form>
                     <hr>
-                    "; }?>
+                    "; 
+                    if(isset($_POST['submit_modifier']))
+                    {
+                      $this->eleve->modifNote($_POST['ID_note'],$_POST['note_modif']);
+                    }
+                    
+                    }?>
                     </div>
                   </div>
                 </div>

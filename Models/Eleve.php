@@ -12,9 +12,17 @@ class Eleve
     public static function getNote($id)
     {
         $db =Db::connect();
-        $query =  "SELECT modules.module, notes.note, notes.observation
+        $query =  "SELECT modules.module, notes.note, notes.observation,notes.ID_note
                    FROM modules
                    INNER JOIN notes ON modules.ID_module=notes.ID_note WHERE notes.ID_user='$id'";
+        return Db::execute_query($query);
+
+    }
+    public static function modifNote($id_note,$note)
+    {
+        $db =Db::connect();
+        
+        $query =  "UPDATE notes SET note ='$note' WHERE ID_note='$id_note'";
         return Db::execute_query($query);
 
     }

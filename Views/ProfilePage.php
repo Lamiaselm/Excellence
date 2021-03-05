@@ -16,7 +16,7 @@ if(!isset($_SESSION['ID_user']))
 {
      header('Location: Login.php');
 
-}else {
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,10 +84,9 @@ body{
 }
 </style>
 
-<?php
- 
-  
 
+
+<?php
     if ($_SESSION['type']==2)
     {
        $ens = new EnseignantProfile();
@@ -104,7 +103,7 @@ body{
         $parent->getInfo($_SESSION['ID_user']);
     }
 
-}
+
 ?>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </html>

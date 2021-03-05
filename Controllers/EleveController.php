@@ -53,6 +53,14 @@ class EleveController
 
           
     }
+    public function modifNote($id_note,$note)
+    { 
+        
+               
+                eleve::modifNote($id_note,$note) ;
+
+          
+    }
 
 }
 
