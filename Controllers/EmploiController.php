@@ -18,6 +18,10 @@ class EmploiController
     {
         return $this->emploi->getAll($id_classe,$id_day);
     }
+    public function getAllEns($id_ens,$id_day)
+    {
+        return $this->emploi->getAllEns($id_ens,$id_day);
+    }
     public function getEns($id_ens)
     {
         return $this->emploi->getEns($id_ens);

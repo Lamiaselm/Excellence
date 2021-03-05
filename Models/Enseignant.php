@@ -29,7 +29,9 @@ class Enseignant
     public static function getModuleList($id)
     {
         $db =Db::connect();
-        $query = "SELECT module FROM modules WHERE ID_ens='$id'";
+        $query = "SELECT modules.module
+        FROM modules
+        INNER JOIN enseigner ON modules.ID_module=enseigner.ID_module WHERE enseigner.ID_ens='$id'";
         return Db::execute_query($query);
 
     }

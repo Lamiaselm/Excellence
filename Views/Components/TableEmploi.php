@@ -1,8 +1,9 @@
 <?php
+session_start();
 require_once __DIR__."/GetEmploi.php";
-$id_classe=$_GET['id_classe'];
-$classe=$_GET['classe'];
+$table=new GetEmploi();
 
+$id_ens=$_SESSION['ID_user'];
 
 ?>
 <!DOCTYPE html>
@@ -17,8 +18,17 @@ $classe=$_GET['classe'];
 </head>
 <body>
 <?php
-$table=new GetEmploi();
-$table->getEmploi($id_classe,$classe);
+if ((isset($_GET['id_classe']))&&(isset($_GET['classe'])) )
+{
+    $id_classe=$_GET['id_classe'];
+    $classe=$_GET['classe'];
+    $table->getEmploi($id_classe,$classe);
+}
+
+else {
+    $table->getEmploiEns($id_ens);
+}
+
 ?>
 </body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>

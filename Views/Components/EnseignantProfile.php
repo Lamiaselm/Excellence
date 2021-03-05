@@ -71,7 +71,9 @@ class EnseignantProfile {
               </li>
               <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                 <h6 class='mb-0'>Lien Emploi du temps</h6>
-                <span class='text-secondary'>".$row0['emploi_du_temps']."</span> 
+                <span class='text-secondary'><a target='_blank' href='./Components/TableEmploi.php'>Lien emploi</a></span>
+
+                 
               </li>"; }
                 ?>
                   
