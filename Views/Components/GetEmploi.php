@@ -35,7 +35,7 @@ class GetEmploi {
        
         foreach($result as $row )
         {   
-             echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+             echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['module']."<br>".$row['nom']."<hr>";
 
         }
         echo "</td><td>";
@@ -43,7 +43,7 @@ class GetEmploi {
         $result=$this->emploi->getAll($id_classe,2);
         foreach($result as $row )
         {   
-              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+               echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['module']."<br>".$row['nom']."<hr>";
 
         }
         echo "</td><td>";
@@ -51,7 +51,7 @@ class GetEmploi {
         $result=$this->emploi->getAll($id_classe,3);
         foreach($result as $row )
         {   
-              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+               echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['module']."<br>".$row['nom']."<hr>";
 
         }
         echo "</td><td>";
@@ -59,7 +59,7 @@ class GetEmploi {
         $result=$this->emploi->getAll($id_classe,4);
         foreach($result as $row )
         {   
-              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+               echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['module']."<br>".$row['nom']."<hr>";
 
         }
         echo "</td><td>";
@@ -67,7 +67,7 @@ class GetEmploi {
         $result=$this->emploi->getAll($id_classe,5);
         foreach($result as $row )
         {   
-              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+               echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['module']."<br>".$row['nom']."<hr>";
 
         }
         echo "</td></tr>";
@@ -104,7 +104,7 @@ class GetEmploi {
                
                 foreach($result as $row )
                 {   
-                     echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['classe']."<br>".$row['module']."<hr>";
+                     echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['classe']."<br>".$row['module']."<hr>";
         
                 }
                 echo "</td><td>";
@@ -112,7 +112,7 @@ class GetEmploi {
                 $result=$this->emploi->getAllEns($id_ens,2);
                 foreach($result as $row )
                 {   
-                     echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['classe']."<br>".$row['module']."<hr>";
+                      echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['classe']."<br>".$row['module']."<hr>";
         
                 }
                 echo "</td><td>";
@@ -120,7 +120,7 @@ class GetEmploi {
                 $result=$this->emploi->getAllEns($id_ens,3);
                 foreach($result as $row )
                 {   
-                     echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['classe']."<br>".$row['module']."<hr>";
+                      echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['classe']."<br>".$row['module']."<hr>";
         
                 }
                 echo "</td><td>";
@@ -128,7 +128,7 @@ class GetEmploi {
                 $result=$this->emploi->getAllEns($id_ens,4);
                 foreach($result as $row )
                 {   
-                     echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['classe']."<br>".$row['module']."<hr>";
+                      echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['classe']."<br>".$row['module']."<hr>";
         
                 }
                 echo "</td><td>";
@@ -136,7 +136,7 @@ class GetEmploi {
                 $result=$this->emploi->getAllEns($id_ens,5);
                 foreach($result as $row )
                 {   
-                     echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['classe']."<br>".$row['module']."<hr>";
+                      echo "<h6 style='color: #3AD8ED;'>".$row['heure_debut']."-".$row['heure_fin']."</h6>".$row['classe']."<br>".$row['module']."<hr>";
         
                 }
                 echo "</td></tr>";
