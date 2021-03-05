@@ -18,7 +18,7 @@ class EleveProfile {
 <body>
 <div class="container">
     <div class="main-body">
-    
+      
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
@@ -196,7 +196,7 @@ class EleveProfile {
                     </div>
                     <hr>
                     "; }?>
-                   <a href="AddActivity.php">    <button class='btn btn-outline-primary'>Ajouter</button></a>
+                   <a href="./Components/AddActivity.php" target="_blank">    <button class='btn btn-outline-primary'>Ajouter</button></a>
                     </div>
                   </div>
                 </div>

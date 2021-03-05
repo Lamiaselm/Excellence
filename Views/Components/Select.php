@@ -54,7 +54,7 @@ class Select {
     public function selectActivities()
     {
         
-        $result5=$this->select->selecActivities();
+        $result5=$this->select->selectActivities();
         foreach($result5 as $row5)
         {
             echo "<option value=".$row5['ID_activite']." >".$row5['titre']."</option>";

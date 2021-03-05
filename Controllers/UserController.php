@@ -99,7 +99,7 @@ class UserController{
     }
     public function selectActivities()
     {
-        return $this->model->selectActivities();
+        return $this->model->selectActivity();
     }
     
 }

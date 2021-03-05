@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset( $_SESSION['auth'])) {
-     echo "admin";
+     
     
      header("Location:../Views/Login.php");
      }

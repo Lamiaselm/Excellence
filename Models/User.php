@@ -61,14 +61,14 @@ class user{
         return Db::execute_query($requete)[0];
     }
     public function selectClasse(){
-        echo 'classe';
+        
         $db =Db::connect();
         $requete = "SELECT ID_classe,classe FROM classes";
         return Db::execute_query($requete);
     }
     public function selectModule(){
         $db =Db::connect();
-        echo 'module';
+        
         $requete = "SELECT ID_module,module FROM modules";
         return Db::execute_query($requete);
         print_r($requete);
@@ -85,7 +85,7 @@ class user{
     }
     public function selectActivity(){
         $db =Db::connect();
-        $requete = "SELECT ID_activite,titre FROM activities";
+        $requete = "SELECT ID_activite,titre FROM activites";
         return Db::execute_query($requete);
     }
 

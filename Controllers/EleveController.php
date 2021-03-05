@@ -28,9 +28,30 @@ class EleveController
     {
         return $this->eleve->getAll($id_class);
     }
-    public function getActivities()
-    {
-        return $this->eleve->getActivities();
+    public function modifActivity($id)
+    { 
+        if(!empty($_POST['choix']))
+        {   
+            foreach($_POST['choix'] as $value)
+            {  
+                $choix=$value;
+                
+                eleve::modifActivity($id,$choix); 
+
+            }
+
+           // echo "user added";
+        }else {
+          //  echo "user not added";
+        }
+    }
+    public function addActivity($titre,$descrip,$id)
+    { 
+        
+               
+                eleve::addActivity($titre,$descrip,$id); 
+
+          
     }
 
 }

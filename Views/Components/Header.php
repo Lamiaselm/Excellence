@@ -1,16 +1,9 @@
-<div class="row header sticky-top align-items-center justify-content-between "style="background-color:#d7dedf;color:white;">
-    <div class="col-1 header-item">
-    
-        
-    </div>
-    <div class="col-4  justify-content-center">
-        <h1 class="project-title">Projet WEB</h1>
-    </div>
-    <div class="col-1  justify-content-end">
+
+    <div class="col-1  justify-content-end" style="float:right;">
     <button id="login" type="button" class="btn  btn-outline-success">Login</button>
     <button id="logout" type="button" class="btn  btn-outline-warning">Logout</button>
     </div>
-</div>
+
 
 <?php 
     if(isset($_SESSION['auth']) && $_SESSION['auth']==true){
