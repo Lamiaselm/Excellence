@@ -34,42 +34,52 @@ class GetEmploi {
 <?php 
         $result=$this->emploi->getAll($id_classe,1);
         
+       echo "<tr><td>";
        
         foreach($result as $row )
         {   
-             echo "<hr><td>".$row['heure_debut']."-".$row['heure_fin']."</td>";
-           
-         
+             echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+
         }
-        
-        $result2=$this->emploi->getAll($id_classe,2);
-        foreach($result2 as $row2 )
-        {
-             echo "<td>".$row2['heure_debut']."-".$row2['heure_fin']."</td>";
-           
-         
+        echo "</td><td>";
+       
+        $result=$this->emploi->getAll($id_classe,2);
+        foreach($result as $row )
+        {   
+              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+
         }
+        echo "</td><td>";
+       
         $result=$this->emploi->getAll($id_classe,3);
         foreach($result as $row )
-        {
-             echo "<td>".$row['heure_debut']."-".$row['heure_fin']."</td>";
-           
-         
+        {   
+              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+
         }
+        echo "</td><td>";
+       
         $result=$this->emploi->getAll($id_classe,4);
         foreach($result as $row )
-        {
-             echo "<td>".$row['heure_debut']."-".$row['heure_fin']."</td>";
-           
-         
+        {   
+              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+
         }
+        echo "</td><td>";
+       
         $result=$this->emploi->getAll($id_classe,5);
         foreach($result as $row )
-        {
-             echo "<td>".$row['heure_debut']."-".$row['heure_fin']."</td></hr>";
-           
-         
+        {   
+              echo $row['heure_debut']."-".$row['heure_fin']."<br>".$row['module']."<br>".$row['nom']."<hr>";
+
         }
+        echo "</td></tr>";
+        
+       
+        
+      
+        
+        
         
 
         
