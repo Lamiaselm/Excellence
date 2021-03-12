@@ -49,7 +49,7 @@ Class CycleCards
                         <img src="././Assets/images/dish.svg" alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>Restauration de l'école</h3>
                         <p>La restauration de l'école s'appuie sur des plats de qualité preparé avec des chefs de haute classe.</p>
-                        <a href='#'>Afficher la suite</a>
+                        <a href='./Views/Components/ListeRepas.php'>Afficher la suite</a>
            </div>
                  </div>
                   </div>

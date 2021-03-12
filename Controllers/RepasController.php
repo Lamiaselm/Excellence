@@ -24,6 +24,10 @@ class RepasController
        
        
     }
+    public function getRepas()
+    {
+        return $this->repas->getRepas();
+    }
 
 }
 
