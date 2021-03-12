@@ -12,7 +12,7 @@ public static function addArticle($titre,$image,$descrip,$concerne)
 }
 public static function getArticle()
 {       $db =Db::connect();
-        $query = "SELECT * FROM articles";
+        $query = "SELECT * FROM articles ORDER BY ID_article DESC LIMIT 8";
         return Db::execute_query($query);
 }
 public static function getArticleByCycle($id_cycle)
