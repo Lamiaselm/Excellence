@@ -9,6 +9,7 @@ Class CycleCards
     }
     public function getCards($id_cycle)
     {
+        
 
 
 
@@ -35,7 +36,7 @@ Class CycleCards
                         <img src="././Assets/images/education.svg" alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>Liste des enseignants</h3>
                         <p>Excellence regroupe des enseignats compétents avec un haut niveau d'ensegnemant depuis sa création.</p>
-                        <a href='#'>Lien vers la liste</a>
+                       <?php  echo "<a href='./Views/Components/ListeEns.php?id_cycle=".$id_cycle."'>Lien vers la liste</a>"; ?>
            </div>
            <div class='card-article'>
                         <img src="../../Assets/images/" alt='icon' style='width: 50px;margin-bottom: 15px;'>

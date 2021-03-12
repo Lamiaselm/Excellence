@@ -19,12 +19,7 @@ class ListeEleve {
 <body>
 
 <div class="container" style="margin-top:70px;">
-<?php 
-        $result=$this->eleve->getAll($id_class);
-        foreach($result as $row )
-        {
-            echo "
-     <h3 style='text-align:center;'>Liste des éléves de la classe  :  ".$class." </h3>
+<?php echo "<h3 style='text-align:center;'>Liste des éléves de la classe  :  ".$class." </h3> ";?>
       <table class='table table-bordered'>
         <thead class='thead-dark' style='color:white;background-color:#494848;'>
           <tr>
@@ -34,6 +29,12 @@ class ListeEleve {
           </tr>
         </thead>
         <tbody>
+<?php 
+        $result=$this->eleve->getAll($id_class);
+        foreach($result as $row )
+        {
+            echo "
+    
       <tr>
             <td>".$row['nom']."</td>
             <td>".$row['prenom']."</td>

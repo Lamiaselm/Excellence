@@ -47,5 +47,13 @@ class Enseignant
     $requete = "SELECT * FROM classes WHERE ID_cycle='$id_cycle'";
     return Db::execute_query($requete);
     }
+    public static function getEnsByCycle($id_cycle)
+    {
+    $db =Db::connect();
+    $query = "SELECT users.nom,users.prenom,users.email
+    FROM users
+    INNER JOIN enseignants ON enseignants.ID_user=users.ID_user WHERE enseignants.ID_cycle='$id_cycle' AND users.type=2";
+    return Db::execute_query($query);
+    }
 }
 ?>
