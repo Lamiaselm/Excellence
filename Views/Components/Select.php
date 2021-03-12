@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__."../../../Controllers/UserController.php";
+require_once __DIR__."../../../Controllers/EnseignantController.php";
 
 class Select {
 
@@ -8,6 +9,7 @@ class Select {
 
     public function __construct(){
         $this->select= new UserController();
+        $this->selectEns= new EnseignantController();
        
 
     }
@@ -58,6 +60,16 @@ class Select {
         foreach($result5 as $row5)
         {
             echo "<option value=".$row5['ID_activite']." >".$row5['titre']."</option>";
+        }
+
+    }
+    public function selectCycle()
+    {
+        
+        $result6=$this->selectEns->selectCycle();
+        foreach($result6 as $row6)
+        {
+            echo "<option value=".$row6['ID_cycle']." >".$row6['cycle']."</option>";
         }
 
     }

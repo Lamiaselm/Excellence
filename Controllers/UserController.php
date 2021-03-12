@@ -55,16 +55,16 @@ class UserController{
           //  echo "user not added";
         }
     }
-    public function registerEleve($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3,$classe,$parent)
+    public function registerEleve($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3,$classe,$parent,$cycle)
     {  if($mdp==$mdp_confirmer)
         {   $mdp_hash=hash('md5',$mdp);
-            user::registerEleve($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type,$classe,$parent); 
+            user::registerEleve($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type,$classe,$parent,$cycle); 
            // echo "user added";
         }else {
           //  echo "user not added";
         }
     }
-    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3,$heure)
+    public function registerEns($nom,$prenom,$user_name,$email,$mdp,$mdp_confirmer,$date,$type,$adresse,$tel1,$tel2,$tel3,$heure,$cycle)
     {    
        
          if(($mdp==$mdp_confirmer)&&(!empty($_POST['module'])))
@@ -72,7 +72,7 @@ class UserController{
             foreach($_POST['module'] as $value)
             {  
                 $module=$value;
-                user::registerEns($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type,$heure,$module); 
+                user::registerEns($nom,$prenom,$user_name,$email,$mdp_hash,$date,$adresse,$tel1,$tel2,$tel3,$type,$heure,$module,$cycle); 
 
             }
 
@@ -101,5 +101,10 @@ class UserController{
     {
         return $this->model->selectActivity();
     }
+    public function selectCycle()
+    {
+        return $this->model->selectCycle();
+    }
+
     
 }

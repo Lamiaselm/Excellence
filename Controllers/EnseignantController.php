@@ -24,6 +24,10 @@ class EnseignantController
     {
         return $this->ens->getModuleList($id);
     }
+    public function selectCycle()
+    {
+        return $this->ens->selectCycle();
+    }
 
 }
 

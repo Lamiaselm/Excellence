@@ -62,6 +62,16 @@ $classe_select=new Select();
       <option value="4" >Parent</option>
     </select>
   </div>
+  <div class="form-group" id='cycle' style='display:none;'>
+    <label for="exampleFormControlSelect1">Cycle d'enseignement</label>
+    <select class="form-control" name="cycle">
+      <option value="">Choisir</option>
+      <?php 
+ 
+   $classe_select->selectCycle();
+  ?>
+    </select>
+  </div>
   <div class="form-group" id="classe" style="display:none;">
     <label for="exampleFormControlSelect1">Classes</label>
     <select class="form-control" name="classe">
@@ -138,12 +148,12 @@ $classe_select=new Select();
         $userCTRL->registerParent($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3']);
     }
     elseif(isset($_POST["ajouter_eleve"])){
-      $userCTRL->registerEleve($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['classe'],$_POST['parent']);
+      $userCTRL->registerEleve($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['classe'],$_POST['parent'],$_POST['cycle']);
   }  
   
   elseif(isset($_POST["ajouter_ens"])){
 
-    $userCTRL->registerEns($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['heure']);
+    $userCTRL->registerEns($_POST['nom'],$_POST['prenom'],$_POST['user_name'],$_POST['email'],$_POST['mdp'],$_POST['mdp_confirmer'],$_POST['date'],$_POST['type'],$_POST['adresse'],$_POST['tel1'],$_POST['tel2'],$_POST['tel3'],$_POST['heure'],$_POST['cycle']);
 }
   
    
@@ -173,6 +183,7 @@ $(document).ready(function()
     $("#submit_eleve").hide();
     $("#submit_parent").hide();
     $("#module").show();
+    $("#cycle").show();
     $("#heure").show();
     $("#submit_ens").show();
 
@@ -181,6 +192,7 @@ $(document).ready(function()
  if($(this).val() == "3") {
    $("#module").hide();
    $("#heure").hide();
+   $("#cycle").show();
    $("#submit_ens").hide();
     $("#submit_parent").hide();
    $("#classe").show();
@@ -190,6 +202,7 @@ $(document).ready(function()
   else
  if($(this).val() == "4") {
   $("#module").hide();
+  $("#cycle").hide();
   $("#classe").hide();
   $("#heure").hide();
   $("#parent").hide();

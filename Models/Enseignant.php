@@ -35,5 +35,11 @@ class Enseignant
         return Db::execute_query($query);
 
     }
+    public static function selectCycle()
+    {
+    $db =Db::connect();
+    $requete = "SELECT * FROM cycles";
+    return Db::execute_query($requete);
+    }
 }
 ?>
