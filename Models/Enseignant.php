@@ -50,7 +50,7 @@ class Enseignant
     public static function getEnsByCycle($id_cycle)
     {
     $db =Db::connect();
-    $query = "SELECT users.nom,users.prenom,users.email
+    $query = "SELECT users.nom,users.prenom,users.email,enseignants.heure_reception
     FROM users
     INNER JOIN enseignants ON enseignants.ID_user=users.ID_user WHERE enseignants.ID_cycle='$id_cycle' AND users.type=2";
     return Db::execute_query($query);

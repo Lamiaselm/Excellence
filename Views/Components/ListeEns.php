@@ -35,6 +35,7 @@ class ListeEns {
             <th>Nom</th>
             <th>Prénom</th>
             <th>Email</th>
+            <th>Heure de récéption</th>
           </tr>
         </thead>
         <tbody>
@@ -49,6 +50,7 @@ class ListeEns {
             <td>".$row['nom']."</td>
             <td>".$row['prenom']."</td>
             <td>".$row['email']."</td>
+            <td>".$row['heure_reception']."</td>
           </tr>";
         }
        
