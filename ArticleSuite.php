@@ -31,10 +31,10 @@ class ArticleSuite{
         foreach($result as $row)
         {
           echo "
-          <div class='card-article' style='width:700px;height:500px; font-size:17px;    padding: 40px 43px;'>
+          <div class='card-article' style='width:700px;height:500px;    padding: 40px 43px;'>
                         <img src=".$row['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
-                        <h3>".$row['titre']."</h3>
-                        <p>".$row['description']."</p>
+                        <h2>".$row['titre']."</h2>
+                        <p style='font-size:17px; '>".$row['description']."</p>
                        
            </div>
                ";

@@ -27,9 +27,31 @@ class ArticleListe {
                         <a target='_blank' href='./ArticleSuite.php?id_article=".$row['ID_article']." '>Afficher la suite</a>           </div>
                ";
         }
+        echo "            <input type='submit' style='border:none;outline:none;width:200px;height:50px;' value='Anciens articles' name='plus'>
+
+        </div>
+
+                  </div>";
+                  if (isset($_POST['plus']))
+                  {
+                    echo "
+             <div class='row' style='margin-top:40px;'>
+             <div class='col-md-10'style='margin:0 auto;text-align:center;'>";
+        $result1=$this->article->getArticleNo8();
+        foreach($result1 as $row1)
+        { echo"hello";
+          echo "
+          <div class='card-article'>
+                        <img src=".$row1['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
+                        <h3>".$row1['titre']."</h3>
+                        <p>".$row1['description']."</p>
+                        <a target='_blank' href='./ArticleSuite.php?id_article=".$row1['ID_article']." '>Afficher la suite</a>           </div>
+               ";
+        }
         echo "    </div>
-                  </div>
-                  ";
+                  </div>";
+                  }
+                  
     }
     public function getArticleListeByCycle($id_cycle)
     {
@@ -48,9 +70,29 @@ class ArticleListe {
            </div>
                ";
         }
+        echo "    </div> </div>
+        <input type='submit' style='border:none;outline:none;' value='Anciens articles' name='plus'>";
+                  if (isset($_POST['plus']))
+                  {
+                    echo "
+             <div class='row' style='margin-top:40px;'>
+             <div class='col-md-10'style='margin:0 auto;text-align:center;'>";
+        $result=$this->article->getArticleNo8();
+        foreach($result as $row)
+        {
+          echo "
+          <div class='card-article'>
+                        <img src=".$row['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
+                        <h3>".$row['titre']."</h3>
+                        <p>".$row['description']."</p>
+                        <a target='_blank' href='./ArticleSuite.php?id_article=".$row['ID_article']." '>Afficher la suite</a>           </div>
+               ";
+        }
         echo "    </div>
-                  </div>
-                  ";
+                  </div>";
+                  }
+              
+
     }
 }
 ?>

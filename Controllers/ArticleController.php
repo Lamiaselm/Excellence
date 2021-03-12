@@ -33,6 +33,10 @@ class ArticleController
     {
         return $this->article->getArticle();
     }
+    public function getArticleNo8()
+    {
+        return $this->article->getArticleNo8();
+    }
     public function getArticleByCycle($id_cycle)
     {
         return $this->article->getArticleByCycle($id_cycle);
