@@ -1,11 +1,12 @@
 <?php 
 require_once __DIR__."../../../Controllers/EnseignantController.php";
-
+require_once __DIR__."../../../Controllers/EleveController.php";
 Class CycleCards
 {
-    private $select;
+    private $select,$activite;
     public function __construct(){
         $this->select= new EnseignantController();
+        $this->activite= new EnseignantController();
     }
     public function getCards($id_cycle)
     {
@@ -39,15 +40,15 @@ Class CycleCards
                        <?php  echo "<a href='./Views/Components/ListeEns.php?id_cycle=".$id_cycle."'>Lien vers la liste</a>"; ?>
            </div>
            <div class='card-article'>
-                        <img src="../../Assets/images/" alt='icon' style='width: 50px;margin-bottom: 15px;'>
-                        <h3></h3>
-                        <p></p>
+                        <img src="././Assets/images/information.png" alt='icon' style='width: 50px;margin-bottom: 15px;'>
+                        <h3>Informations pratiques</h3>
+                        <p>Excellence offre aux étudiants un certain nombre d'activité pratiques dans des différents domaines.</p>
                         <a href='#'>Afficher la suite</a>
            </div>
            <div class='card-article'>
-                        <img src="../../Assets/images/" alt='icon' style='width: 50px;margin-bottom: 15px;'>
-                        <h3></h3>
-                        <p></p>
+                        <img src="././Assets/images/dish.svg" alt='icon' style='width: 50px;margin-bottom: 15px;'>
+                        <h3>Restauration de l'école</h3>
+                        <p>La restauration de l'école s'appuie sur des plats de qualité preparé avec des chefs de haute classe.</p>
                         <a href='#'>Afficher la suite</a>
            </div>
                  </div>
