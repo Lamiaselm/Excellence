@@ -41,5 +41,11 @@ class Enseignant
     $requete = "SELECT * FROM cycles";
     return Db::execute_query($requete);
     }
+    public static function getClassByCycle($id_cycle)
+    {
+    $db =Db::connect();
+    $requete = "SELECT * FROM classes WHERE ID_cycle='$id_cycle'";
+    return Db::execute_query($requete);
+    }
 }
 ?>

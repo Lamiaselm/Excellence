@@ -28,6 +28,10 @@ class EnseignantController
     {
         return $this->ens->selectCycle();
     }
+    public function getClassByCycle($id_cycle)
+    {
+        return $this->ens->getClassByCycle($id_cycle);
+    }
 
 }
 
