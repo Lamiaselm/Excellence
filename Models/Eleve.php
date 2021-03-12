@@ -76,10 +76,14 @@ class Eleve
             $query3="INSERT INTO participer (ID_eleve,ID_activite) VALUES ('$id',(SELECT ID_activite FROM activites WHERE ID_activite='$choix'))";
             $err = Db::execute_query($query3);
         }
-       
+    }
+    public static function getAllActivities()
+    {
+        $db =Db::connect();
+        $query = "SELECT * FROM activites";
+        return Db::execute_query($query);
 
     }
-   
   
 }
 ?>

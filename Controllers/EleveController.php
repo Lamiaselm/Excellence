@@ -61,7 +61,10 @@ class EleveController
 
           
     }
-
+    public function getAllActivities()
+    {
+        return $this->eleve->getAllActivities();
+    }
 }
 
 ?>

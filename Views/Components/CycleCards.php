@@ -6,7 +6,7 @@ Class CycleCards
     private $select,$activite;
     public function __construct(){
         $this->select= new EnseignantController();
-        $this->activite= new EnseignantController();
+        $this->activite= new EleveController();
     }
     public function getCards($id_cycle)
     {
@@ -43,7 +43,7 @@ Class CycleCards
                         <img src="././Assets/images/information.png" alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>Informations pratiques</h3>
                         <p>Excellence offre aux étudiants un certain nombre d'activité pratiques dans des différents domaines.</p>
-                        <a href='#'>Afficher la suite</a>
+                        <a href='./Views/Components/ListeActivites.php'>Lien vers la liste</a>
            </div>
            <div class='card-article'>
                         <img src="././Assets/images/dish.svg" alt='icon' style='width: 50px;margin-bottom: 15px;'>
