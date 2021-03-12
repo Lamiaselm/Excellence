@@ -35,11 +35,11 @@ session_start();
   <div class="form-group">
     <label for="exampleFormControlSelect1">Utilisateurs concenrnés</label>
     <select class="form-control" name="choix">
-      <option value="1">Tous</option>
-      <option value="2">Enseignants</option>
-      <option value="3">Primaire</option>
-      <option value="4">Moyen</option>
-      <option value="5">Secondaire</option>
+      <option value="4">Tous</option>
+      <option value="5">Enseignants</option>
+      <option value="1">Primaire</option>
+      <option value="2">Moyen</option>
+      <option value="3">Secondaire</option>
       <option value="6">Parent</option>
     </select>
   </div>

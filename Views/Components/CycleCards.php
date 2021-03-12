@@ -1,6 +1,7 @@
 <?php 
 require_once __DIR__."../../../Controllers/EnseignantController.php";
 require_once __DIR__."../../../Controllers/EleveController.php";
+require_once __DIR__."/ArticleListe.php";
 Class CycleCards
 {
     private $select,$activite;
@@ -53,6 +54,10 @@ Class CycleCards
            </div>
                  </div>
                   </div>
+                  <?php 
+                    $article= new ArticleListe();
+                    $article->getArticleListeByCycle($id_cycle);
+                  ?>
 
 <?php
     }

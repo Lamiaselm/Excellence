@@ -15,6 +15,11 @@ public static function getArticle()
         $query = "SELECT * FROM articles";
         return Db::execute_query($query);
 }
+public static function getArticleByCycle($id_cycle)
+{       $db =Db::connect();
+        $query = "SELECT * FROM articles WHERE concerne='$id_cycle' OR concerne=4";
+        return Db::execute_query($query);
+}
 public static function deleteArticle($id)
 {       $db =Db::connect();
         $query="DELETE FROM articles WHERE ID_article='$id";
