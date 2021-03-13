@@ -12,7 +12,7 @@ Class menu
 
 <div class="menu" id="nav">
 <ul>
-    <    <li><a href="http://127.0.0.1/Excellence/Accueil.php">Accueil </a></li>
+      <li><a href="http://127.0.0.1/Excellence/Accueil.php">Accueil </a></li>
 
     <li> <a href="#">Présentation de l'Eccole</a>
         <ul class="list-item">

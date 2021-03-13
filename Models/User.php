@@ -45,6 +45,40 @@ class user{
     public function registerEns($nom,$prenom,$user_name,$email,$mdp,$date,$adresse,$tel1,$tel2,$tel3,$type,$heure,$module,$cycle)
     {
         $db =Db::connect();
+        $query0="SELECT ID_user from users WHERE email='$email'";
+        $err = Db::execute_query($query0);
+        if(count($err)>0)
+        {  echo "hh";
+            $query1="UPDATE users SET 
+            nom='$nom',
+            prenom='$prenom',
+            user_name='$user_name',
+            email='$email',
+            mdp='$mdp',
+            date_naissance='$date',
+            adresse='$adresse',
+            tel1='$tel1',
+            tel2='$tel2',
+            tel3='$tel3',
+            type='$type' 
+            WHERE email='$email';
+           ";
+            $err = Db::execute_query($query1);
+         
+            $query3="UPDATE enseignants SET 
+            ID_cycle='$cycle',
+            heure_reception='$heure'
+            WHERE ID_user=(SELECT ID_user FROM users WHERE email='$email')
+            ";
+            $err = Db::execute_query($query3);
+    
+            $query3="UPDATE enseigner SET 
+            ID_module='$module'
+            WHERE ID_ens=(SELECT ID_user FROM users WHERE email='$email')
+            ";
+            $err = Db::execute_query($query3);
+        }
+        else{
         $query1="INSERT INTO users (nom,prenom,user_name,email,mdp,date_naissance,adresse,tel1,tel2,tel3,type) VALUES ('$nom','$prenom','$user_name','$email','$mdp','$date','$adresse','$tel1','$tel2','$tel3','$type')";
         $err = Db::execute_query($query1);
      
@@ -53,7 +87,7 @@ class user{
 
         $query3="INSERT INTO enseigner (ID_ens,ID_module) VALUES ((SELECT ID_user FROM users WHERE email='$email'),'$module')";
         $err = Db::execute_query($query3);
-        
+        }
 
     }
     public function getUserById($id){
