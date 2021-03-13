@@ -20,8 +20,8 @@ class ContactInfo {
         <img src='Assets/images/contact.jpg' style='width:381.203px;height:344.250px;'>
         </div>
         <div class='col-md-5'>
-        <h1 style='text-align:center;margin-bottom:40px;color:#175fe4;'>Contactez-nous!</h1>
-        <table class='table'>
+        <h1 style='text-align:center;margin-bottom:40px;color:#258bff;'>Contactez-nous!</h1>
+        <table class='table' style="font-size:15px;">
        
         <tbody>
       <?php 
@@ -32,10 +32,10 @@ class ContactInfo {
     
       
          
-           <tr> <td> Email : ".$row['email']."</td></tr>
-           <tr> <td> Adresse : ".$row['adresse']."</td></tr>
-           <tr> <td> Numéro de téléphone : ".$row['tel']."</td></tr>
-           <tr> <td> Numéro de fax : ".$row['fax']."</td></tr>";
+           <tr> <td style='    font-size: 20px;'> <b style='    font-size: 20px;color:#258bff;'>Email : </b> ".$row['email']."</td></tr>
+           <tr> <td style='    font-size: 20px;'> <b style='    font-size: 20px;color:#258bff;'> Adresse : </b> ".$row['adresse']."</td></tr>
+           <tr> <td style='    font-size: 20px;'> <b style='    font-size: 20px;color:#258bff;'> Numéro de téléphone : </b> ".$row['tel']."</td></tr>
+           <tr> <td style='    font-size: 20px;'> <b style='    font-size: 20px;color:#258bff;'>Numéro de Fax : </b>".$row['fax']."</td></tr>";
         
           
         }
