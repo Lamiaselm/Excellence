@@ -27,7 +27,7 @@ class ArticleListe {
                         <a target='_blank' href='./ArticleSuite.php?id_article=".$row['ID_article']." '>Afficher la suite</a>           </div>
                ";
         }
-        echo "    <form method='POST' enctype='multipart/form-data'> <input type='submit' style='outline:none;width:200px;height:50px;' value='Anciens articles' name='plus'></form>";
+        echo "    <form method='POST' enctype='multipart/form-data'> <input type='submit' style='outline:none;width:200px;height:50px;margin-bottom:30px;' value='Anciens articles' name='plus'></form>";
         if (isset($_POST['plus']))
                   {
                     echo " <h3 style='margin-top:20px;'>Les articles les plus anciens</h3>

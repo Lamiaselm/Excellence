@@ -9,7 +9,7 @@ require_once __DIR__."/Views/Components/ContactInfo.php";
 
 
 ?>
-
+<title>Contactez-nous</title>
 <body>
     <!-- Image and text -->
 <nav class="navbar navbar-light bg-light" style="padding:15px;position: sticky;z-index: 1; top:0;margin-bottom:90px;height: 65px;">
