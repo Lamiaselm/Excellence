@@ -9,6 +9,7 @@ public static function addArticle($titre,$image,$descrip,$concerne)
     $query="INSERT INTO articles (titre,image,description,concerne) VALUES ('$titre','$image','$descrip','$concerne')";
     $err = Db::execute_query($query);
     
+    
 }
 public static function getArticle()
 {       $db =Db::connect();

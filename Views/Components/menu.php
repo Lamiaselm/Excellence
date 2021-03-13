@@ -25,6 +25,8 @@ Class menu
     </li>
     <li><a href="#">Espaces Ecole</a>
         <ul class="list-item">
+        <li><a href="http://127.0.0.1/Excellence/Views/AdminPage.php">Espace Admin</a></li>
+        <li><a href="http://127.0.0.1/Excellence/Views/ProfilePage.php">Espace Enseignant</a></li>
             <li><a href="http://127.0.0.1/Excellence/Views/ProfilePage.php">Espace Eleve</a></li>
             <li><a href="http://127.0.0.1/Excellence/Views/ProfilePage.php">Esoace Parent</a></li>
             

@@ -192,9 +192,11 @@ class EleveProfile {
                     if(isset($_POST['submit_modifier']))
                     {
                       $this->eleve->modifNote($_POST['ID_note'],$_POST['note_modif']);
+                   
                     }
                     
                     }?>
+                   
                     
                     </div>
                   </div>

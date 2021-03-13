@@ -11,7 +11,8 @@ if(isset( $_SESSION['auth'])) {
    
     }
     else{
-       
+        require_once __DIR__."/Components/menu.php";
+        require_once __DIR__."/Components/footer.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,10 @@ if(isset( $_SESSION['auth'])) {
     <title>Login</title>
 </head>
 <body style="background-color: #494848;">
+<?php 
+ $menu=new menu();
+ $menu->getMenu();
+?>
 <div class="container-login">
 <h1 class="title">Authentification</h1>
 
