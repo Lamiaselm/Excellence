@@ -17,6 +17,9 @@ class EnseignantProfile {
 ?>
 
 <body>
+<?php 
+    include ("Header.php");
+    ?>
 <div class="container">
     <div class="main-body">
     
@@ -221,8 +224,8 @@ class EnseignantProfile {
 
 
   <?php
-      }
-    }
+      
+    }}
   ?>
                    
                    

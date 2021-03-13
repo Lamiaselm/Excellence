@@ -1,6 +1,12 @@
 <?php 
 
 session_start();
+if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
+     
+    
+  header("Location:../Views/Login.php");
+  }
+  else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,3 +80,5 @@ session_start();
 </script>
 </body>
 </html>
+<?php }
+?>

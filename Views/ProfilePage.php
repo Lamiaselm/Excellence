@@ -1,8 +1,6 @@
 <?php
 
-require_once __DIR__."../Components/EleveProfile.php";
-require_once __DIR__."../Components/EnseignantProfile.php";
-require_once __DIR__."../Components/ParentProfile.php";
+
 if ((isset($_GET['id_eleve']))&& (isset($_GET['ens'])))
 {  
     
@@ -12,11 +10,15 @@ if ((isset($_GET['id_eleve']))&& (isset($_GET['ens'])))
 error_reporting(0);
 session_start();
 
-if(!isset($_SESSION['ID_user']))
-{
-     header('Location: Login.php');
-
-}
+if(!isset( $_SESSION['auth'])) {
+     
+   
+     header("Location:../Views/Login.php");
+     }
+ else{
+    require_once __DIR__."../Components/EleveProfile.php";
+    require_once __DIR__."../Components/EnseignantProfile.php";
+    require_once __DIR__."../Components/ParentProfile.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +29,7 @@ if(!isset($_SESSION['ID_user']))
     <link   href="../Assets/Excellence-style.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <title>Profile page</title>
 </head>
 <style>
@@ -104,7 +107,7 @@ body{
         $parent->getInfo($_SESSION['ID_user']);
     }
 
-
+     }
 ?>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
 </html>

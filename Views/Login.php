@@ -1,8 +1,14 @@
 <?php
 session_start();
 if(isset( $_SESSION['auth'])) {
-   
+   if ($_SESSION['type']==1)
+   {
     header("Location:../Views/AdminPage.php");
+   }
+   else {
+    header("Location:../Views/ProfilePage.php");
+   }
+   
     }
     else{
        

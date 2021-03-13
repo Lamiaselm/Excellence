@@ -1,11 +1,12 @@
 <?php
 session_start();
-if(!isset( $_SESSION['auth'])) {
+if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
      
     
      header("Location:../Views/Login.php");
      }
      else{
+         
 
 ?>
 <!DOCTYPE html>
@@ -41,7 +42,7 @@ if(!isset( $_SESSION['auth'])) {
                         <h2>Gestion de la présentation de l’école. </h2>
                    </div>
                    </a>
-                   <a href="">
+                   <a href="EmploiPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion des emplois du temps</h2>

@@ -18,7 +18,7 @@ class user{
         $requete = "SELECT * FROM users WHERE email = '$email' AND mdp = '$mdp_hash'";
         $users= Db::execute_query($requete);
         foreach ($users as $user) {
-            if(count($users)>0){
+            if(count($users)==1){
                 self::$auth = true;
             }
         }

@@ -10,7 +10,8 @@
 ?>
     <script>
             $("#logout").click(function(e){
-                window.location.href='../Controllers/logoutController.php';
+                window.location.href='http://127.0.0.1/Excellence/Controllers/logoutController.php';
+                
             });
             $("#login").hide();;
     </script>
@@ -21,7 +22,7 @@
 ?>  
     <script>
             $("#login").click(function(e){
-                window.location.href='../Views/Login.php';
+                window.location.href='http://127.0.0.1/Excellence/Views/Login.php';
             });
             $("#logout").hide();;
     </script>

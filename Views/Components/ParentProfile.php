@@ -17,6 +17,9 @@ class ParentProfile {
 ?>
 
 <body>
+<?php 
+    require_once ("Header.php");
+    ?>
 <div class="container">
     <div class="main-body">
     

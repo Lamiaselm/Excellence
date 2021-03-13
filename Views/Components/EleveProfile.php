@@ -18,6 +18,9 @@ class EleveProfile {
 ?>
 
 <body>
+<?php 
+    include ("Header.php");
+    ?>
 <div class="container">
     <div class="main-body">
       

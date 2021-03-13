@@ -12,10 +12,7 @@ class AllArticle {
        
 
     }
-    public function getAllArticle()
-    {
-
-    }
+  
 }
 
     ?>

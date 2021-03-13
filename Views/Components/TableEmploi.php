@@ -9,7 +9,6 @@ $id_ens=$_SESSION['ID_user'];
 
 ?>
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
