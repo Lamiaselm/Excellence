@@ -8,7 +8,7 @@ require_once __DIR__."/Views/Components/CycleCards.php";
 
 
 ?>
-
+<title>Cycle</title>
 <body>
     <!-- Image and text -->
 <nav class="navbar navbar-light bg-light" style="padding:15px;position: sticky;z-index: 1; top:0;height: 65px;">

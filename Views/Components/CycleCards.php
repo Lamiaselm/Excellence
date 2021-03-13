@@ -38,19 +38,19 @@ Class CycleCards
                         <img src="././Assets/images/education.svg" alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>Liste des enseignants</h3>
                         <p>Excellence regroupe des enseignats compétents avec un haut niveau d'ensegnemant depuis sa création.</p>
-                       <?php  echo "<a href='./Views/Components/ListeEns.php?id_cycle=".$id_cycle."'>Lien vers la liste</a>"; ?>
+                       <?php  echo "<a target='_blank' href='./Views/Components/ListeEns.php?id_cycle=".$id_cycle."'>Lien vers la liste</a>"; ?>
            </div>
            <div class='card-article'>
                         <img src="././Assets/images/information.png" alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>Informations pratiques</h3>
                         <p>Excellence offre aux étudiants un certain nombre d'activité pratiques dans des différents domaines.</p>
-                        <a href='./Views/Components/ListeActivites.php'>Lien vers la liste</a>
+                        <a target='_blank' href='./Views/Components/ListeActivites.php'>Lien vers la liste</a>
            </div>
            <div class='card-article'>
                         <img src="././Assets/images/dish.svg" alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>Restauration de l'école</h3>
                         <p>La restauration de l'école s'appuie sur des plats de qualité preparé avec des chefs de haute classe.</p>
-                        <a href='./Views/Components/ListeRepas.php'>Afficher la suite</a>
+                        <a target='_blank' href='./Views/Components/ListeRepas.php'>Afficher la suite</a>
            </div>
                  </div>
                   </div>
