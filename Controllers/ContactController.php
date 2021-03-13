@@ -4,39 +4,19 @@ class ContactController
 {
     private $contact;
     public function __construct(){
-        $this->contact=new ContactController();
+        $this->contact=new Contact();
 
     }
-    public function addcontact($titre,$descrip,$concerne)
+    public function addcontact($email,$adr,$tel,$fax)
     {
-       /* $concerne="";
-        if (!empty($_POST['choix']))
-        {
-            foreach ($_POST['choix'] as $value)
-            {
-                $concerne=$concerne.$value;
-            }
-        }*/
-        $filename = $_FILES["image"]["name"]; 
-        $tempname = $_FILES["image"]["tmp_name"];     
-        $folder = "../contacts/".$filename; 
-        $file_path="././contacts/".$filename; 
-        if (move_uploaded_file($tempname, $folder))  { 
-            $msg = "Image uploaded successfully"; 
-        }else{ 
-            $msg = "Failed to upload image"; 
-      } 
-     
-        contact::addcontact($titre,$file_path,$descrip,$concerne);
+    
+        contact::addcontact($email,$adr,$tel,$fax);
     }
     public function getcontact()
     {
         return $this->contact->getcontact();
     }
-    public function getcontactByCycle($id_cycle)
-    {
-        return $this->contact->getcontactByCycle($id_cycle);
-    }
+    
 
 }
 
