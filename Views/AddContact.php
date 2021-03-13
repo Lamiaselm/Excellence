@@ -7,6 +7,13 @@ if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
   header("Location:../Views/Login.php");
   }
   else{
+    if ($_SESSION['type']!=1)
+   {
+    header("Location:ProfilePage.php");
+   }
+   else {
+   
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,5 +83,5 @@ if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
 </body>
 </html>
 <?php 
-  }
+  }}
 ?>

@@ -7,6 +7,11 @@ if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
   header("Location:../Views/Login.php");
   }
   else{
+    if ($_SESSION['type']!=1)
+   {
+    header("Location:ProfilePage.php");
+   }
+   else {
 require_once __DIR__."./Components/Select.php";
 
 
@@ -30,7 +35,7 @@ $classe_select=new Select();
 
     
      <div class="article-container" style="height:100%;">
-     <h2>Ajouter un utilisateur</h2>
+     <h2>Ajouter/modifier un utilisateur</h2>
      <form method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleFormControlInput1">Nom de l'utilisateur</label>
@@ -225,5 +230,5 @@ $(document).ready(function()
 </body>
 </html>
 <?php 
-  }
+  }}
 ?>

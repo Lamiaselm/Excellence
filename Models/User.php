@@ -48,7 +48,7 @@ class user{
         $query0="SELECT ID_user from users WHERE email='$email'";
         $err = Db::execute_query($query0);
         if(count($err)>0)
-        {  echo "hh";
+        {  
             $query1="UPDATE users SET 
             nom='$nom',
             prenom='$prenom',

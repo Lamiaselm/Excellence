@@ -45,26 +45,26 @@ if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
     <div class="container"style="margin-top: 90px;">
          <div class="row">
               <div class="col-md-10 container-categ">
-                   <a href="ArticlePage.php">
+                   <a target='_blank' href="ArticlePage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion des articles</h2>
                         
                    </div>
                    </a>
-                   <a href="PresentationPage.php">
+                   <a target='_blank' href="PresentationPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/class.png" alt="icon">
                         <h2>Gestion de la présentation de l’école. </h2>
                    </div>
                    </a>
-                   <a href="EmploiPage.php">
+                   <a target='_blank' href="EmploiPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/schedule.svg" alt="icon">
                         <h2>Gestion des emplois du temps</h2>
                    </div>
                    </a>
-                   <a href="">
+                   <a target='_blank' href="RegisterPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/education.svg" alt="icon">
                         <h2>Gestion des enseignants</h2>
@@ -74,25 +74,25 @@ if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
     </div>
     <div class="row">
               <div class="col-md-10 container-categ">
-              <a href="RegisterPage.php">
+              <a target='_blank' href="RegisterPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/user.png" alt="icon">
                         <h2>Gestion des utilisateurs</h2>
                    </div>
                    </a>
-                   <a href="RepasPage.php">
+                   <a target='_blank' href="RepasPage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/application.png" alt="icon">
                         <h2>Gestion de la restauration</h2>
                    </div>
                    </a>
-                   <a href="AddContact.php">
+                   <a target='_blank' href="AddContact.php">
                    <div class="card-admin">
                         <img src="../Assets/images/contact.png" alt="icon">
                         <h2>Gestion de la page contact</h2>
                    </div>
                    </a>
-                   <a href="DiaporamaImagePage.php">
+                   <a target='_blank' href="DiaporamaImagePage.php">
                    <div class="card-admin">
                         <img src="../Assets/images/settings.png" alt="icon">
                         <h2>Catégorie paramètres</h2>

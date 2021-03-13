@@ -51,7 +51,7 @@ class EleveProfile {
                      
                       
                      
-                      <button class='btn btn-primary'>Modifier</button>
+                     
                       
                     </div>
                   </div>

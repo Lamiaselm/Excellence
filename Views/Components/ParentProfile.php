@@ -50,8 +50,7 @@ class ParentProfile {
                      
                       
                      
-                      <button class='btn btn-primary'>Modifier</button>
-                      <button class='btn btn-outline-primary'>Message</button>
+                     
                     </div>
                   </div>
                 </div>
