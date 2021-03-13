@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__."../../../Controllers/EnseignantController.php";
+require_once __DIR__."/ArticleListe.php";
 
 class EnseignantProfile {
 
@@ -74,7 +75,13 @@ class EnseignantProfile {
                 <span class='text-secondary'><a target='_blank' href='./Components/TableEmploi.php'>Lien emploi</a></span>
 
                  
-              </li>"; }
+              </li>";}
+            echo"  <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
+              <h6 class='mb-0'>Articles</h6>
+              <form method='POST' enctype='multipart/form-data'> <input type='submit' style='outline:none;width:150px;height:30px;' value='Afficher articles' name='plus'></form>
+              </li>
+            ";
+            
                 ?>
                   
                 </ul>
@@ -201,8 +208,15 @@ class EnseignantProfile {
             </div>
           </div>
         </div>
-    </div>";
+    </div>
+    <?php 
+    if(isset($_POST['plus']))
+    {
+      $article=new ArticleListe();
+      $article->getArticleListeByCycle(2);
+    }
   
+  ?>
 </body>
 
 

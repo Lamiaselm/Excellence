@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__."../../../Controllers/ParentController.php";
+require_once __DIR__."/ArticleListe.php";
 
 class ParentProfile {
 
@@ -73,8 +74,12 @@ class ParentProfile {
                       <div class='col-sm-3 text-secondary'><a target='_blank' href='./ProfilePage.php?id_eleve=".$row0['ID_user']."'>Link</a>
                       </div>
                     </div>
-              </li>
-              "; }
+              </li>";}
+          echo"    <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
+              <h6 class='mb-0'>Articles</h6>
+              <form method='POST' enctype='multipart/form-data'> <input type='submit' style='outline:none;width:150px;height:30px;' value='Afficher articles' name='plus'></form>
+            </li>
+            "; 
                 ?>
                   
                 </ul>
@@ -159,8 +164,15 @@ class ParentProfile {
             </div>
           </div>
         </div>
-    </div>";
+    </div>
+    <?php 
+    if(isset($_POST['plus']))
+    {
+      $article=new ArticleListe();
+      $article->getArticleListeByCycle(4);
+    }
   
+  ?>
 </body>
 
 

@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__."../../../Controllers/EleveController.php";
+require_once __DIR__."/ArticleListe.php";
+
 
 class EleveProfile {
 
@@ -75,11 +77,18 @@ class EleveProfile {
                   <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
                     <h6 class='mb-0'>Lien emploi du temps</h6>
                     <span class='text-secondary'><a target='_blank' href='./Components/TableEmploi.php?id_classe=".$row0['ID_classe']."&classe=".$row0['classe']."'>Link</a></span>
-                  </li>"; }
+                  </li>";}
+                 echo " <li class='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
+                  <h6 class='mb-0'>Articles</h6>
+                  <form method='POST' enctype='multipart/form-data'> <input type='submit' style='outline:none;width:150px;height:30px;' value='Afficher articles' name='plus'></form>
+                  </li>
+                ";
+              
                   ?>
                 </ul>
               </div>
             </div>
+            
             <?php  echo "
             <div class='col-md-8'>
               <div class='card mb-3'>
@@ -215,7 +224,14 @@ class EleveProfile {
           </div>
         </div>
     </div>
+  <?php 
+    if(isset($_POST['plus']))
+    {
+      $article=new ArticleListe();
+      $article->getArticleListeByCycle(3);
+    }
   
+  ?>
 </body>
 
 
