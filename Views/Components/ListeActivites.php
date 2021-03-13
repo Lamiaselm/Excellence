@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,7 @@
    </div>
 </nav>
 <?php
+
 require_once __DIR__."../../../Controllers/EleveController.php";
 require_once __DIR__."/menu.php";
 require_once __DIR__."/footer.php";

@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__."../../../Controllers/ArticleController.php";
 
 class ArticleListe {

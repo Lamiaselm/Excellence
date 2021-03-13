@@ -1,4 +1,11 @@
 <?php
+session_start();
+if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
+     
+    
+  header("Location:../Views/Login.php");
+  }
+  else{
 require_once __DIR__."../../../Controllers/ContactController.php";
 
 class ContactInfo {
@@ -52,7 +59,7 @@ class ContactInfo {
     }
     
    
-}
+}}
 ?>
 
                    

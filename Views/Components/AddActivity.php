@@ -6,6 +6,7 @@ if (isset($_GET['id_eleve']))
     
     header('Location: EleveProfile.php');
 } else {
+  
   require_once __DIR__."../../../Controllers/EleveController.php";
   require_once __DIR__."./Select.php";
   $classe_select=new Select();
