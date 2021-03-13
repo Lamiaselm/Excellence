@@ -1,11 +1,13 @@
 <?php
-
+session_start();
 require_once __DIR__."/GetEmploi.php";
 require_once __DIR__."/menu.php";
 require_once __DIR__."/footer.php";
 $table=new GetEmploi();
-
-$id_ens=$_SESSION['ID_user'];
+if(isset($_SESSION['ID_user']))
+{
+    $id_ens=$_SESSION['ID_user'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -40,16 +42,14 @@ if ((isset($_GET['id_classe']))&&(isset($_GET['classe'])) )
     $id_classe=$_GET['id_classe'];
     $classe=$_GET['classe'];
     $table->getEmploi($id_classe,$classe);
-    $footer=new footer();
-    $footer->getFooter();
+   
 }
 
 else {
     $menu=new menu();
     $menu->getMenu();
     $table->getEmploiEns($id_ens);
-    $footer=new footer();
-    $footer->getFooter();
+ 
 }
 
 ?>

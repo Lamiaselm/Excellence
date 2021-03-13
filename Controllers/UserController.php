@@ -38,7 +38,7 @@ class UserController{
                 header('Location: ../Views/ProfilePage.php');
             }
             
-        }else {echo "no";
+        }else {echo "Mot de passe ou email incorrcte";
             $_SESSION['auth'] = false;
            
         }

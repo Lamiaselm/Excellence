@@ -73,7 +73,7 @@ class ParentProfile {
                       <div class='col-sm-5 text-secondary'>"
                         .$row0['prenom']."
                       </div>
-                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./ProfilePage.php?id_eleve=".$row0['ID_user']."'>Link</a>
+                      <div class='col-sm-3 text-secondary'><a target='_blank' href='./ProfilePage.php?id_eleve=".$row0['ID_user']."&parent=true'>Link</a>
                       </div>
                     </div>
               </li>";}

@@ -42,9 +42,8 @@ class PresentationListe {
           echo "
                        <div class='col-md-4'style='margin:0 auto;'>
                         <p>".$row['paragraphe']."</p>
-                        <img src=".$row['image']." alt='icon' style='width: 100%;margin-bottom: 15px;'>
+                        <img src=".$row['image']." alt='icon' style='width: 80%;margin-bottom: 15px;'>
                         <form method='POST' enctype='multipart/form-data' style='    display: inline-block;'>  <input type='submit' value='Supprimer' name='submit_delete' style='width:100px;margin-right:80px;'></form>
-                        <form method='POST' enctype='multipart/form-data'style='    display: inline-block; '>  <input type='submit' value='Modifier' name='submit_modifier' style='width:100px;'></form>
                         </div>";
 
         

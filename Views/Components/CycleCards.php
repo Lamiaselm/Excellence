@@ -1,11 +1,6 @@
 <?php 
-session_start();
-if((!isset( $_SESSION['auth']))|| (empty($_SESSION['auth']))) {
-     
-    
-  header("Location:../Views/Login.php");
-  }
-  else{
+
+  
 require_once __DIR__."../../../Controllers/EnseignantController.php";
 require_once __DIR__."../../../Controllers/EleveController.php";
 require_once __DIR__."/ArticleListe.php";
@@ -67,6 +62,6 @@ Class CycleCards
                   ?>
 
 <?php
-    }
+    
 }}
 ?>
