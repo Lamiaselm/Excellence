@@ -213,7 +213,7 @@ class EnseignantProfile {
     if(isset($_POST['plus']))
     {
       $article=new ArticleListe();
-      $article->getArticleListeByCycle(2);
+      $article->getArticleListeByProfil(2);
     }
   
   ?>

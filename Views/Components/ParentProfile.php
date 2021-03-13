@@ -169,7 +169,7 @@ class ParentProfile {
     if(isset($_POST['plus']))
     {
       $article=new ArticleListe();
-      $article->getArticleListeByCycle(4);
+      $article->getArticleListeByProfil(4);
     }
   
   ?>

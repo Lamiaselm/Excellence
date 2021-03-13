@@ -12,7 +12,7 @@ require_once __DIR__."/Views/Components/ContactInfo.php";
 
 <body>
     <!-- Image and text -->
-<nav class="navbar navbar-light bg-light" style="padding:15px;position: sticky;z-index: 1; top:0;margin-bottom:90px;">
+<nav class="navbar navbar-light bg-light" style="padding:15px;position: sticky;z-index: 1; top:0;margin-bottom:90px;height: 65px;">
    <div class="row" style="width:100%;"> 
    <div class="col-md-10">
    <img src="Assets/images/logo.png" width="180px" height="23px" class="d-inline-block align-top" alt="">
