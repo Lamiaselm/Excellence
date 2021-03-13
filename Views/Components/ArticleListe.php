@@ -88,7 +88,7 @@ class ArticleListe {
                         <img src=../".$row2['image']." alt='icon' style='width: 50px;margin-bottom: 15px;'>
                         <h3>".$row2['titre']."</h3>
                         <p>".$row2['description']."</p>
-                        <a target='_blank' href='./ArticleSuite.php?id_article=".$row2['ID_article']." '>Afficher la suite</a>
+                        <a target='_blank' href='.././ArticleSuite.php?id_article=".$row2['ID_article']." '>Afficher la suite</a>
            </div>
                ";
         }
