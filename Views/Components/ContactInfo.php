@@ -16,7 +16,7 @@ class ContactInfo {
         
         
         <div class='row' style="margin-top:90px;">
-        <div class='col-md-5'>
+        <div class='col-md-5' style="    margin-left: 90px;">
         <img src='Assets/images/contact.jpg' style='width:381.203px;height:344.250px;'>
         </div>
         <div class='col-md-5'>
